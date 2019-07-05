@@ -1,0 +1,36 @@
+.home-actions {
+    flex-wrap: nowrap;
+}
+
+.input-icon {
+    font-size: 150%;
+    padding-right: 10px;
+}
+
+.location-icon {
+    font-size: 150%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.location-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.input-group-divider {
+    padding-bottom: 20px;
+}
+
+.home-actions-button {
+    font-size: 80%;
+    height: 80px;
+}
+
+ion-button {
+    text-transform: none;
+}
+
+ion-icon {
+    font-size: 50px;
+}

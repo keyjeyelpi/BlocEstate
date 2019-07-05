@@ -1,0 +1,317 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button fill="clear">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>List Properties</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: center; font-weight: bolder;">
+        <ion-text>Start earning by listing your properties</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-segment color="secondary">
+          <ion-segment-button value="for-sale" checked>
+            <ion-label>For Sale</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="for-rent">
+            <ion-label>For Rent</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              Property Type
+            </ion-label>
+            <ion-select>
+              <ion-select-option value="loft" selected>
+                Loft
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              How many Bedrooms?
+            </ion-label>
+            <ion-select>
+              <ion-select-option value="1">
+                1
+              </ion-select-option>
+              <ion-select-option value="2">
+                2
+              </ion-select-option>
+              <ion-select-option value="3" selected>
+                3
+              </ion-select-option>
+              <ion-select-option value="4">
+                4
+              </ion-select-option>
+              <ion-select-option value="5">
+                5
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              How many Bathrooms?
+            </ion-label>
+            <ion-select>
+              <ion-select-option value="1">
+                1
+              </ion-select-option>
+              <ion-select-option value="2">
+                2
+              </ion-select-option>
+              <ion-select-option value="3">
+                3
+              </ion-select-option>
+              <ion-select-option value="4" selected>
+                4
+              </ion-select-option>
+              <ion-select-option value="5">
+                5
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              Parking
+            </ion-label>
+            <ion-select>
+              <ion-select-option value="1" selected>
+                1
+              </ion-select-option>
+              <ion-select-option value="2">
+                2
+              </ion-select-option>
+              <ion-select-option value="3">
+                3
+              </ion-select-option>
+              <ion-select-option value="4">
+                4
+              </ion-select-option>
+              <ion-select-option value="5">
+                5
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="3">
+            <ion-label class="center">
+              Balcony
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-segment color="secondary">
+              <ion-segment-button value="yes" checked>
+                <ion-label>Yes</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="no">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              Price
+            </ion-label>
+            <ion-item>
+              <ion-button fill="clear" color="primary">
+                $
+              </ion-button>
+              <ion-input type="number">
+              </ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              Lot Area
+            </ion-label>
+            <ion-item>
+              <ion-input type="number">
+              </ion-input>
+              <ion-button fill="clear" color="primary">
+                sqm
+              </ion-button>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              Floor Area
+            </ion-label>
+            <ion-item>
+              <ion-input type="number">
+              </ion-input>
+              <ion-button fill="clear" color="primary">
+                sqm
+              </ion-button>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>Address</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-select placeholder="Province">
+              <ion-select-option selected>
+                Province
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-select>
+              <ion-select-option selected>
+                City
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-input placeholder="Street Number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              Location
+            </ion-label>
+            <ion-item>
+              <ion-icon name="search"></ion-icon>
+              <ion-input type="number">
+              </ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col style="text-align: center;">
+            <ion-label>
+              <ion-icon name="pin"></ion-icon>
+              Or use your current location
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>
+              Description
+            </ion-label>
+            <ion-item>
+              <ion-textarea></ion-textarea>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label stacked>
+              Upload Photos
+              <br />
+            </ion-label>
+            <ion-label style="font-size: 10px;">
+              You may add up to 8 photos.
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-icon name="add-circle-outline"></ion-icon>
+              <ion-input placeholder="Add Photos"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full">
+            <ion-ripple-effect></ion-ripple-effect>
+            Continue
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" disabled>
+            <ion-ripple-effect></ion-ripple-effect>
+            Save Draft
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

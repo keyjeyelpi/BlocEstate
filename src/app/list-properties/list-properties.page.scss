@@ -1,0 +1,48 @@
+ion-col ion-label {
+    color: #6e6e6e;
+}
+
+ion-col ion-select {
+    border-bottom: solid 1px #6e6e6e;
+    color: #aeaeae;
+}
+
+.center{
+    height: 100%;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+ion-item ion-button {
+    height: 100%;
+    border-radius: 0px !important;
+    padding: 2px;
+    width: auto;
+}
+
+.top-overlay {
+    z-index: 1000;
+}
+
+.ios ion-item {
+    left: -5%;
+    width: 105%;
+}
+
+ion-input {
+    width: 100%;
+}
+
+.md ion-input {
+    font-size: 15px;
+}
+
+.ios ion-input {
+    margin-left: 16px;
+}
+
+ion-item ion-icon {
+    font-size: 15px;
+    color: #6e6e6e;
+}
