@@ -9,3 +9,44 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+@font-face {
+    font-family: open-sans;
+    src: url( 'assets/font/opensans-regular.ttf' );
+}
+
+@font-face {
+    font-family: open-sans-bold;
+    src: url( 'assets/font/opensans-bold.ttf' );
+}
+
+@font-face {
+    font-family: open-sans-light;
+    src: url( 'assets/font/opensans-light.ttf' );
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    font-family: open-sans;
+}
+
+ion-title {
+    font-family: open-sans-bold;
+}
+
+.ion-text-bold {
+    font-family: open-sans-bold;
+}
+
+ion-button {
+    font-family: 'Lato', sans-serif;
+}
+
+.primary-gradient {
+    background-image: linear-gradient(to right, #45BBD8, #029FBD) !important;
+}
+
+a {
+    all: unset;
+}

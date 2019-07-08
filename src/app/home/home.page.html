@@ -1,76 +1,21 @@
 <ion-header>
   <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-button color="dark">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
     <ion-title>Bloc Estate</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark" [routerLink]="['filter']">
+        <ion-icon slot="icon-only" name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title class="ion-text-center">Hello, let's get started!</ion-card-title>
-      <ion-card-subtitle>What brings you to Bloc Estate today?</ion-card-subtitle>
-    </ion-card-header>
-    
-    <ion-card-content>
-      <ion-row class="home-actions">
-        <ion-col col-4>
-          <ion-button expand="full" color="light" class="home-actions-button">
-            <div>
-              <div><ion-icon name="search"></ion-icon></div>
-              <label class="button-label">Find a Home</label>
-            </div>
-          </ion-button>
-        </ion-col>
 
-        <ion-col col-4>
-          <ion-button expand="full" color="light" class="home-actions-button">
-            <div>
-              <div><ion-icon name="clipboard"></ion-icon></div>
-              <label class="button-label">List a Property</label>
-            </div>
-          </ion-button>
-        </ion-col>
-
-        <ion-col col-4>
-          <ion-button expand="full" color="light" class="home-actions-button">
-            <div>
-              <div><ion-icon name="person"></ion-icon></div>
-              <label class="button-label">Get Estate Help</label>
-            </div>
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <div class="input-group-divider">
-        <ion-text>Location</ion-text>
-        <ion-item>  
-          <ion-icon name="search" class="input-icon" item-start></ion-icon>
-          <ion-input placeholder="Search Location"></ion-input>
-        </ion-item>
-
-        <ion-row>
-          <ion-col text-center>
-            <ion-icon name="pin" class="location-icon"></ion-icon>
-            <ion-text class="location-text">Or use your current location</ion-text>
-          </ion-col>
-        </ion-row>
-      </div>
-
-      <div class="input-group-divider">
-        <ion-text>Price Range</ion-text>
-        <ion-item>  
-          <ion-icon name="cash" class="input-icon" item-start></ion-icon>
-          <ion-input placeholder="Price Range"></ion-input>
-        </ion-item>
-      </div>
-
-      <div class="input-group-divider">
-        <ion-button expand="full" color="light">Find</ion-button>
-      </div>
-    </ion-card-content>
-  </ion-card>
 </ion-content>

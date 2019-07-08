@@ -1,5 +1,7 @@
 {
   "name": "Bloc-Estate",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

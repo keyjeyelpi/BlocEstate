@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="true">
+    <div class="input-group-divider ion-text-center">
+      <h2>Before we do that, let's get you signed up!</h2>
+    </div>
+
+    <div class="input-group-divider">
+      <ion-item>  
+        <ion-input placeholder="Email"></ion-input>
+      </ion-item>
+    </div>
+    
+    <div class="input-group-divider">
+      <ion-item>  
+        <ion-input placeholder="Password" type="password"></ion-input>
+      </ion-item>      
+    </div>
+
+    <div class="input-group-divider ion-text-center">
+      <ion-text>By pressing Submit, you agree to Bloc Estate's <a [routerLink]="['/signup']">Terms of Use</a>.</ion-text>      
+    </div>
+    
+    <div class="input-group-divider">
+      <ion-button expand="full" color="light">Submit</ion-button>
+      <ion-button expand="full" color="light">Sign up with <ion-icon name="logo-facebook" class="button-logo"></ion-icon> Facebook</ion-button>
+      <ion-button expand="full" color="light">Sign up with <ion-icon name="logo-google" class="button-logo"></ion-icon> Google</ion-button>
+    </div>
+    
+    <div class="input-group-divider ion-text-center">
+      <ion-text>Got an account? <a [routerLink]="['/signin']">Sign In</a>.</ion-text>      
+    </div>
+</ion-content>

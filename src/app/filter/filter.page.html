@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+  
+    <ion-title>Bloc Estate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Hello, let's get started!</ion-card-title>
+      <ion-card-subtitle>What brings you to Bloc Estate today?</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="input-group-divider">
+        <ion-row>
+          <ion-col>
+            <ion-button [color]="listType == 'sale' ? 'medium' : 'light'" (click)="listType = 'sale'" expand="full">For Sale</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button [color]="listType == 'rent' ? 'medium' : 'light'" (click)="listType = 'rent'" expand="full">For Rent</ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="input-group-divider">
+        <ion-text>Property Type</ion-text>
+        <ion-item>
+          <ion-label>Property Type</ion-label>
+          <ion-select placeholder="Select property type">
+            <ion-select-option value="1">Option 1</ion-select-option>
+            <ion-select-option value="2">Option 2</ion-select-option>
+            <ion-select-option value="3">Option 3</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+
+      <div class="input-group-divider">
+        <ion-text>Location</ion-text>
+        <ion-item>  
+          <ion-icon name="search" class="input-icon" item-start></ion-icon>
+          <ion-input placeholder="Search Location"></ion-input>
+        </ion-item>
+
+        <ion-row>
+          <ion-col text-center>
+            <ion-icon name="pin" class="location-icon"></ion-icon>
+            <ion-text class="location-text">Or use your current location</ion-text>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="input-group-divider">
+        <ion-text>Price Range</ion-text>
+        <ion-text float-right>${{ currentMin }} - ${{ currentMax }}</ion-text>
+        
+        <ion-item>  
+          <ion-range [min]="priceRangeMin" [max]="priceRangeMax" step="5000" 
+            [(ngModel)]="priceRange" (ionChange)="changeRangeValues(priceRange)" 
+            color="dark" dualKnobs="true"></ion-range>
+        </ion-item>
+      </div>
+
+      <div class="input-group-divider">
+        <ion-button expand="full" color="light" [routerLink]="['/signup']">Find</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
