@@ -58,3 +58,9 @@ a {
 .dotted{
     border-bottom: dotted 1px black;
 }
+
+.vertical-center {
+    display: flex !important;
+    align-content: center !important;
+    align-items: center !important;
+}

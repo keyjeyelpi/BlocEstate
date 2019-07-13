@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar mode="ios">
     <ion-buttons slot="secondary">
       <ion-button fill="clear" href="/basic-verification">
@@ -8,9 +8,15 @@
     <ion-title>Signing Parties</ion-title>
   </ion-toolbar>
 </ion-header>
-
+ -->
 <ion-content>
-  <ion-card *ngFor="let att of data;">
+  <ion-card class="ion-text-center ion-padding">
+    <ion-card-title class="ion-text-bold" color="primary">
+      SIGNING PARTIES
+    </ion-card-title>
+  </ion-card>
+
+  <ion-card class="ion-padding" *ngFor="let att of data;">
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -82,7 +88,7 @@
 
       <ion-row>
         <ion-col>
-          <ion-input placeholder="### ### ####" type="number" [(ngModel)]="data[att].phone.number"></ion-input>
+          <ion-input placeholder="### ### ####" [(ngModel)]="data[att].phone.number"></ion-input>
         </ion-col>
       </ion-row>
     </ion-grid>

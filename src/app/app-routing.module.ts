@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: 'signin', loadChildren: './signin/signin.module#SigninPageModule' },
   { path: 'filter', loadChildren: './filter/filter.module#FilterPageModule' },  { path: 'basic-verification', loadChildren: './basic-verification/basic-verification.module#BasicVerificationPageModule' },
   { path: 'signing-parties', loadChildren: './signing-parties/signing-parties.module#SigningPartiesPageModule' },
+  { path: 'talk-money', loadChildren: './talk-money/talk-money.module#TalkMoneyPageModule' },
+  { path: 'eks', loadChildren: './eks/eks.module#EksPageModule' },
 
 
   // { path: 'menu-logged-out', loadChildren: './menu-logged-out/menu-logged-out.module#MenuLoggedOutPageModule' },
