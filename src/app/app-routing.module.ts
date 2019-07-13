@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'signing-parties', loadChildren: './signing-parties/signing-parties.module#SigningPartiesPageModule' },
   { path: 'talk-money', loadChildren: './talk-money/talk-money.module#TalkMoneyPageModule' },
   { path: 'eks', loadChildren: './eks/eks.module#EksPageModule' },
+  { path: 'final-details', loadChildren: './final-details/final-details.module#FinalDetailsPageModule' },
 
 
   // { path: 'menu-logged-out', loadChildren: './menu-logged-out/menu-logged-out.module#MenuLoggedOutPageModule' },
