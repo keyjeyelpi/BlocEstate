@@ -16,7 +16,7 @@
     </ion-card-title>
   </ion-card>
 
-  <ion-card color="white" class="ion-padding" *ngFor="let att of data;">
+  <ion-card color="white" class="ion-padding" *ngFor="let person of persons;">
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -27,7 +27,7 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="First" [(ngModel)]="data[att].name.first">
+          <ion-input placeholder="First" [(ngModel)]="person.name.first"> 
 
           </ion-input>
         </ion-col>
@@ -35,7 +35,7 @@
 
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Last" [(ngModel)]="data[att].name.last">
+          <ion-input placeholder="Last" [(ngModel)]="person.name.last">
 
           </ion-input>
         </ion-col>
@@ -50,7 +50,7 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Street Address" [(ngModel)]="data[att].address.street">
+          <ion-input placeholder="Street Address" [(ngModel)]="person.address.street">
 
           </ion-input>
         </ion-col>
@@ -58,12 +58,12 @@
 
       <ion-row>
         <ion-col size="6">
-          <ion-input placeholder="City" [(ngModel)]="data[att].address.city">
+          <ion-input placeholder="City" [(ngModel)]="person.address.city">
 
           </ion-input>
         </ion-col>
         <ion-col size="6">
-          <ion-input placeholder="Region" [(ngModel)]="data[att].address.region">
+          <ion-input placeholder="Region" [(ngModel)]="person.address.region">
 
           </ion-input>
         </ion-col>
@@ -71,12 +71,12 @@
 
       <ion-row>
         <ion-col size="6">
-          <ion-input placeholder="Postal/Zip Code" [(ngModel)]="data[att].address.zip">
+          <ion-input placeholder="Postal/Zip Code" [(ngModel)]="person.address.zip">
 
           </ion-input>
         </ion-col>
         <ion-col size="6">
-          <ion-select placeholder="Country" [(ngModel)]="data[att].address.country">
+          <ion-select placeholder="Country" [(ngModel)]="person.address.country">
             <ion-select-option select="selected">Canada</ion-select-option>
           </ion-select>
         </ion-col>
@@ -92,7 +92,7 @@
 
       <ion-row>
         <ion-col>
-          <ion-input placeholder="### ### ####" [(ngModel)]="data[att].phone.number"></ion-input>
+          <ion-input placeholder="### ### ####" [(ngModel)]="person.phone.number"></ion-input>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -7,15 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigningPartiesPage implements OnInit {
 
-  public data: any = [{ 'name' : { 'first' : '' , 'last' : '' },'address' : { 'street' : '' , 'city' : '' , 'region' : '' , 'zip' : '' , 'country' : '' } , 'phone' : '' }];
+  public persons: any = [{ "name" : { "first" : "" , "last" : "" },"address" : { "street" : "" , "city" : "" , "region" : "" , "zip" : "" , "country" : "" } , "phone" : "" }];
 
   constructor() { }
 
   ngOnInit() {
+    this.addSignee();
   }
 
   addSignee() {
-    this.data.push({ 'name' : { 'first' : '' , 'last' : '' },'address' : { 'street' : '' , 'city' : '' , 'region' : '' , 'zip' : '' , 'country' : '' } , 'phone' : '' });
+    this.persons.push({ "name" : { "first" : "" , "last" : "" },"address" : { "street" : "" , "city" : "" , "region" : "" , "zip" : "" , "country" : "" } , "phone" : "" });
   }
 
   alert() {
