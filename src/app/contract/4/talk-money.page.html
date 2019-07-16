@@ -9,17 +9,19 @@
   </ion-toolbar>
 </ion-header>
  -->
-<ion-content>
-  <ion-card class="ion-text-center ion-padding">
-    <ion-card-title class="ion-text-bold" color="primary">
+<ion-content color="light">
+  <ion-card class="ion-text-center ion-padding" color="gradient">
+    <ion-card-title class="ion-text-bold">
       LET'S TALK MONEY
     </ion-card-title>
   </ion-card>
-  <ion-card>
+  <ion-card color="white">
     <ion-grid>
       <ion-row>
-        <ion-col size="12" class="ion-text-bold">
-          Purchase Price
+        <ion-col size="12">
+          <ion-text class="ion-text-bold" color="primary">
+            Purchase Price
+          </ion-text>
         </ion-col>
         <ion-col size="12">
           <ion-input placeholder="00.00">
@@ -29,11 +31,13 @@
       </ion-row>
     </ion-grid>
   </ion-card>
-  <ion-card>
+  <ion-card color="white">
     <ion-grid>
       <ion-row>
-        <ion-col size="12" class="ion-text-bold">
-          Downpayment Value
+        <ion-col size="12">
+          <ion-text class="ion-text-bold" color="primary">
+            Downpayment Value
+          </ion-text>
         </ion-col>
         <ion-col size="12">
           <ion-input placeholder="00.00">
@@ -43,11 +47,13 @@
       </ion-row>
     </ion-grid>
   </ion-card>
-  <ion-card>
+  <ion-card color="white">
     <ion-grid>
       <ion-row>
-        <ion-col size="12" class="ion-text-bold">
-          Deposit Value
+        <ion-col size="12">
+          <ion-text class="ion-text-bold" color="primary">
+            Deposit Value
+          </ion-text>
         </ion-col>
         <ion-col size="12">
           <ion-input placeholder="00.00">
@@ -57,11 +63,13 @@
       </ion-row>
     </ion-grid>
   </ion-card>
-  <ion-card>
+  <ion-card color="white">
     <ion-grid>
       <ion-row>
-        <ion-col size="12" class="ion-text-bold">
-          Amount to be Financed
+        <ion-col size="12">
+          <ion-text class="ion-text-bold" color="primary">
+            Amount to be Financed
+          </ion-text>
         </ion-col>
         <ion-col size="12">
           <ion-input placeholder="00.00">
@@ -75,23 +83,23 @@
   <ion-grid class="ion-padding-horizontal">
     <ion-row>
       <ion-col class="ion-text-justify">
-        <ion-label color="dark">
-            This is automatically checked if the mortgage has been brokered through Bloc Estate or if proof of mortgage
-            preapproval has been uploaded.
-        </ion-label>
+        <p>
+          This is automatically checked if the mortgage has been brokered through Bloc Estate or if proof of mortgage
+          preapproval has been uploaded.
+        </p>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="1" class="vertical-center">
         <ion-checkbox></ion-checkbox>
       </ion-col>
-      <ion-col size="11">
+      <ion-col size="11" class="ion-text-justify">
         <p>I have been preapproved for the entirety of the 'Amount to be Financed' in the box above.</p>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <a href="/eks">
+  <a href="/contract/5">
     <ion-button expand="block" color="gradient" class="ion-margin-horizontal">
       Continue
     </ion-button>

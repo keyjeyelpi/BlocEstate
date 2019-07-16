@@ -64,3 +64,8 @@ a {
     align-content: center !important;
     align-items: center !important;
 }
+
+html[mode="ios"] ion-col[size="1"] ion-checkbox {
+    height: 17px;
+    width: 20px;
+}

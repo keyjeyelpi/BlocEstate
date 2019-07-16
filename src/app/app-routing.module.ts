@@ -3,14 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: 'contract', loadChildren: './contract/contract.module#ContractPageModule' },
   { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' },
   { path: 'signin', loadChildren: './signin/signin.module#SigninPageModule' },
-  { path: 'filter', loadChildren: './filter/filter.module#FilterPageModule' },  { path: 'basic-verification', loadChildren: './basic-verification/basic-verification.module#BasicVerificationPageModule' },
-  { path: 'signing-parties', loadChildren: './signing-parties/signing-parties.module#SigningPartiesPageModule' },
-  { path: 'talk-money', loadChildren: './talk-money/talk-money.module#TalkMoneyPageModule' },
-  { path: 'eks', loadChildren: './eks/eks.module#EksPageModule' },
-  { path: 'final-details', loadChildren: './final-details/final-details.module#FinalDetailsPageModule' },
+  { path: 'filter', loadChildren: './filter/filter.module#FilterPageModule' },
+  { path: 'contract/1', loadChildren: './contract/1/basic-verification.module#BasicVerificationPageModule' },
+  { path: 'contract/2', loadChildren: './contract/2/signing-parties.module#SigningPartiesPageModule' },
+  { path: 'contract/3', loadChildren: './contract/3/eks.module#EksPageModule' },
+  { path: 'contract/4', loadChildren: './contract/4/talk-money.module#TalkMoneyPageModule' },
+  { path: 'contract/5', loadChildren: './contract/5/final-details.module#FinalDetailsPageModule' },
 
 
   // { path: 'menu-logged-out', loadChildren: './menu-logged-out/menu-logged-out.module#MenuLoggedOutPageModule' },
@@ -25,4 +25,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

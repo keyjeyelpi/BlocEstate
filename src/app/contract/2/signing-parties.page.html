@@ -9,18 +9,20 @@
   </ion-toolbar>
 </ion-header>
  -->
-<ion-content>
-  <ion-card class="ion-text-center ion-padding">
-    <ion-card-title class="ion-text-bold" color="primary">
+<ion-content color="light">
+  <ion-card class="ion-text-center ion-padding" color="gradient">
+    <ion-card-title class="ion-text-bold">
       SIGNING PARTIES
     </ion-card-title>
   </ion-card>
 
-  <ion-card class="ion-padding" *ngFor="let att of data;">
+  <ion-card color="white" class="ion-padding" *ngFor="let att of data;">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-text class="ion-text-bold">NAME</ion-text>
+          <ion-text class="ion-text-bold" color="primary">
+            NAME
+          </ion-text>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -41,7 +43,9 @@
 
       <ion-row>
         <ion-col>
-          <ion-text class="ion-text-bold">ADDRESS</ion-text>
+          <ion-text class="ion-text-bold" color="primary">
+            ADDRESS
+          </ion-text>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -80,7 +84,7 @@
 
       <ion-row>
         <ion-col>
-          <ion-text class="ion-text-bold">
+          <ion-text class="ion-text-bold" color="primary">
             PHONE
           </ion-text>
         </ion-col>
@@ -94,7 +98,7 @@
     </ion-grid>
   </ion-card>
 
-  <a href="/talk-money">
+  <a href="/contract/3">
     <ion-button expand="block" class="ion-margin-horizontal" color="gradient">
       Continue
     </ion-button>
