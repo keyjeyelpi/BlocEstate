@@ -1,27 +1,25 @@
-<ion-header no-border>
+<!-- <ion-header no-border>
   <ion-toolbar mode="ios">
     <ion-title>Menu</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content class="ion-padding-vertical">
+<ion-content class="ion-padding-vertical" color="light">
 
-  <a href="/tabs/edit-profile">
-    <ion-card class="no-padding ion-margin-vertical">
-      <ion-card-content>
-        <ion-item lines="none" class="no-padding">
-          <ion-text slot="start" class="ion-text-bold">
-            Hello KJ
-          </ion-text>
-          <ion-avatar slot="end">
-            <img src="assets/img/2.png">
-          </ion-avatar>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-  </a>
+  <ion-card class="no-padding ion-margin-vertical" color="gradient">
+    <ion-card-content>
+      <ion-item lines="none" class="no-padding" color="gradient">
+        <ion-text slot="start" class="ion-text-bold">
+          Hello KJ
+        </ion-text>
+        <ion-avatar slot="end">
+          <img src="assets/img/2.png">
+        </ion-avatar>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 
-  <ion-card>
+  <ion-card color="white">
     <ion-grid class="no-padding">
       <ion-row class="ion-padding">
         <ion-col size="11">
@@ -43,8 +41,8 @@
           <ion-icon name="card"></ion-icon>
         </ion-col>
       </ion-row>
-      <ion-row class="ion-padding">
-        <a href="/basic-verification">
+      <a href="/contract/1">
+        <ion-row class="ion-padding">
           <ion-col size="11">
             <ion-text>
               Contract Agreements
@@ -53,8 +51,8 @@
           <ion-col size="1">
             <ion-icon name="paper"></ion-icon>
           </ion-col>
-        </a>
-      </ion-row>
+        </ion-row>
+      </a>
       <ion-row class="ion-padding">
         <ion-col size="11">
           <ion-text>
@@ -107,4 +105,12 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <a href="/tabs/edit-profile">
+      <ion-fab-button color="gradient">
+        <ion-icon name="create"></ion-icon>
+      </ion-fab-button>
+    </a>
+  </ion-fab>
 </ion-content>
