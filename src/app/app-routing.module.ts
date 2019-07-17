@@ -6,11 +6,11 @@ const routes: Routes = [
   { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' },
   { path: 'signin', loadChildren: './signin/signin.module#SigninPageModule' },
   { path: 'filter', loadChildren: './filter/filter.module#FilterPageModule' },
-  { path: 'contract/1', loadChildren: './contract/1/basic-verification.module#BasicVerificationPageModule' },
-  { path: 'contract/2', loadChildren: './contract/2/signing-parties.module#SigningPartiesPageModule' },
-  { path: 'contract/3', loadChildren: './contract/3/eks.module#EksPageModule' },
-  { path: 'contract/4', loadChildren: './contract/4/talk-money.module#TalkMoneyPageModule' },
-  { path: 'contract/5', loadChildren: './contract/5/final-details.module#FinalDetailsPageModule' },
+  { path: 'contract/step-1', loadChildren: './contract/step-1/basic-verification.module#BasicVerificationPageModule' },
+  { path: 'contract/step-2', loadChildren: './contract/step-2/signing-parties.module#SigningPartiesPageModule' },
+  { path: 'contract/step-3', loadChildren: './contract/step-3/eks.module#EksPageModule' },
+  { path: 'contract/step-4', loadChildren: './contract/step-4/talk-money.module#TalkMoneyPageModule' },
+  { path: 'contract/step-5', loadChildren: './contract/step-5/final-details.module#FinalDetailsPageModule' },
 
 
   // { path: 'menu-logged-out', loadChildren: './menu-logged-out/menu-logged-out.module#MenuLoggedOutPageModule' },

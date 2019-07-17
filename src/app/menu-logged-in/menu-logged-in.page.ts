@@ -12,4 +12,8 @@ export class MenuLoggedInPage implements OnInit {
   ngOnInit() {
   }
 
+  blur() {
+    
+  }
+
 }

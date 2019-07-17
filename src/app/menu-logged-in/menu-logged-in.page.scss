@@ -10,3 +10,7 @@ ion-row:first-of-type {
 ion-row:last-of-type {
     border-bottom: none;
 }
+
+ion-tab-bar {
+    filter: blur(4px) !important;
+}
