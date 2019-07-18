@@ -76,7 +76,8 @@
   --ion-color-light-tint: #f5f6f9;
 
   /** gradient **/
-  --ion-color-gradient: linear-gradient(to right, #45BBD8, #029FBD);
+  --ion-color-gradient: linear-gradient(to right, rgb(62,171,229), rgb(8,130,212));
+  // --ion-color-gradient: linear-gradient(to right, #45BBD8, #029FBD);
   --ion-color-gradient-rgb: 56, 128, 255;
   --ion-color-gradient-contrast: #ffffff;
   --ion-color-gradient-contrast-rgb: 255, 255, 255;
