@@ -13,6 +13,9 @@ const routes: Routes = [
   { path: 'contract/step-5', loadChildren: './contract/step-5/final-details.module#FinalDetailsPageModule' },
   { path: 'contract/my-contracts', loadChildren: './contract/my-contracts/my-contracts.module#MyContractsPageModule' },
   { path: 'contract/view-contract', loadChildren: './contract/view-contract/view-contract.module#ViewContractPageModule' },
+  { path: 'contract/viewing-schedule', loadChildren: './contract/viewing-schedule/viewing-schedule.module#ViewingSchedulePageModule' },  { path: 'view-details', loadChildren: './view-details/view-details.module#ViewDetailsPageModule' },
+
+
 
 
   // { path: 'menu-logged-out', loadChildren: './menu-logged-out/menu-logged-out.module#MenuLoggedOutPageModule' },
