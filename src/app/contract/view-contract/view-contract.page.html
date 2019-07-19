@@ -1,14 +1,53 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons>
+<ion-header lines="none" no-border>
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="secondary">
       <ion-button (click)="close()" color="gradient">
         <ion-icon name="close"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>view-contract</ion-title>
+    <ion-title>{{information.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content color="light">
+  <ion-card color="white">
+    <ion-img color="light" *ngIf="information.image; else defaultImage" src="assets/img/estate/{{information.image}}">
+    </ion-img>
+    <ng-template #defaultImage>
+      <ion-img color="light" src="assets/img/estate/default.svg">
+      </ion-img>
+    </ng-template>
+  </ion-card>
+  <ion-card color="white">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-text class="ion-text-bold" color="primary">
+            COSTS
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-padding">
+        <ion-col>
+          <ion-text>
+            Real Estate Fee - ${{information.cost | number : fractionSize}}
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-padding">
+        <ion-col>
+          <ion-text>
+            Maintenance Fee - ${{information.maintenance | number : fractionSize}}
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-padding">
+        <ion-col>
+          <ion-text>
+            Total Fee - ${{total | number : fractionSize}}
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>

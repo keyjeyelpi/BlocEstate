@@ -1,7 +1,7 @@
 <!-- <ion-header>
   <ion-toolbar mode="ios">
     <ion-buttons slot="secondary">
-      <ion-button fill="clear" href="/basic-verification">
+      <ion-button fill="clear" routerLink="/basic-verification">
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -27,7 +27,7 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="First" [(ngModel)]="person.name.first"> 
+          <ion-input placeholder="First" [(ngModel)]="person.name.first">
 
           </ion-input>
         </ion-col>
@@ -98,11 +98,9 @@
     </ion-grid>
   </ion-card>
 
-  <a href="/contract/step-3">
-    <ion-button expand="block" class="ion-margin-horizontal" color="gradient">
-      Continue
-    </ion-button>
-  </a>
+  <ion-button expand="block" class="ion-margin-horizontal" color="gradient" routerLink="/contract/step-3">
+    Continue
+  </ion-button>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="gradient" (click)="addSignee()">

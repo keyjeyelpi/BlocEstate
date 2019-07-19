@@ -11,11 +11,20 @@ export class MyContractsPage implements OnInit {
 
   constructor(public modalController : ModalController ) { }
 
-  public contracts : any = [{ "value" : "Bahay 1"},{ "value" : "Bahay 2"},{ "value" : "Bahay 3"},{ "value" : "Bahay 4"},{ "value" : "Bahay 5"},{ "value" : "Bahay 6"},{ "value" : "Bahay 7"},{ "value" : "Bahay 9"},{ "value" : "Bahay 10"},{ "value" : "Bahay 11"}]
+  public contracts : any = 
+  [
+    { "id" : "1" , "title" : "Bahay 1", "image" : "1.jpg", "cost" : "799999", "maintenance" : "420"},
+    { "id" : "2" , "title" : "Bahay 2", "image" : "", "cost" : "899999", "maintenance" : "450"},
+    { "id" : "3" , "title" : "Bahay 3", "image" : "", "cost" : "699999", "maintenance" : "410"},
+    { "id" : "4" , "title" : "Bahay 4", "image" : "", "cost" : "599999", "maintenance" : "320"}
+    ]
 
-  async showInfo(){
+  async showInfo( contract_information ){
     const modal = await this.modalController.create({
-      component : ViewContractPage
+      component : ViewContractPage,
+      componentProps : {
+        contract_information : contract_information
+      }
     })
     return await modal.present()
   }

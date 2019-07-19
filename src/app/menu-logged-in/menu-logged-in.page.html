@@ -38,8 +38,7 @@ cd </ion-header> -->
           <ion-icon color="primary" name="calendar"></ion-icon>
         </ion-col>
       </ion-row>
-      <a href="my-contracts">
-        <ion-row class="ion-padding">
+        <ion-row class="ion-padding" routerLink="/contract/my-contracts">
           <ion-col size="11">
             <ion-text>
               My Contracts
@@ -49,7 +48,6 @@ cd </ion-header> -->
             <ion-icon color="primary" name="today"></ion-icon>
           </ion-col>
         </ion-row>
-      </a>
     </ion-grid>
   </ion-card>
 
@@ -75,8 +73,7 @@ cd </ion-header> -->
           <ion-icon color="primary" name="card"></ion-icon>
         </ion-col>
       </ion-row>
-      <a href="/contract/1">
-        <ion-row class="ion-padding">
+        <ion-row class="ion-padding" routerLink="/contract/step-1">
           <ion-col size="11">
             <ion-text>
               Contract Agreements
@@ -86,7 +83,6 @@ cd </ion-header> -->
             <ion-icon color="primary" name="paper"></ion-icon>
           </ion-col>
         </ion-row>
-      </a>
       <ion-row class="ion-padding">
         <ion-col size="11">
           <ion-text>
@@ -141,10 +137,8 @@ cd </ion-header> -->
   </ion-grid>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <a href="/tabs/edit-profile">
-      <ion-fab-button color="gradient">
+      <ion-fab-button color="gradient" routerLink="/tabs/edit-profile">
         <ion-icon mode="md" name="create"></ion-icon>
       </ion-fab-button>
-    </a>
   </ion-fab>
 </ion-content>
