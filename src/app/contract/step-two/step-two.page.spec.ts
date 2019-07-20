@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SigningPartiesPage } from './step-two.page';
+import { StepTwoPage } from './step-two.page';
 
-describe('SigningPartiesPage', () => {
-  let component: SigningPartiesPage;
-  let fixture: ComponentFixture<SigningPartiesPage>;
+describe('StepTwoPage', () => {
+  let component: StepTwoPage;
+  let fixture: ComponentFixture<StepTwoPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SigningPartiesPage ],
+      declarations: [ StepTwoPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SigningPartiesPage);
+    fixture = TestBed.createComponent(StepTwoPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

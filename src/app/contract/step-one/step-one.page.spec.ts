@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicVerificationPage } from './step-one.page';
+import { StepOnePage } from './step-one.page';
 
-describe('BasicVerificationPage', () => {
-  let component: BasicVerificationPage;
-  let fixture: ComponentFixture<BasicVerificationPage>;
+describe('StepOnePage', () => {
+  let component: StepOnePage;
+  let fixture: ComponentFixture<StepOnePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BasicVerificationPage ],
+      declarations: [ StepOnePage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BasicVerificationPage);
+    fixture = TestBed.createComponent(StepOnePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

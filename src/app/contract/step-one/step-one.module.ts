@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { BasicVerificationPage } from './step-one.page';
+import { StepOnePage } from './step-one.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: BasicVerificationPage
+    component: StepOnePage
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [BasicVerificationPage]
+  declarations: [StepOnePage]
 })
-export class BasicVerificationPageModule {}
+export class StepOnePageModule {}

@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { step-threePage } from './step-three.page';
+import { StepThreePage } from './step-three.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: step-threePage
+    component: StepThreePage
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [step-threePage]
+  declarations: [StepThreePage]
 })
-export class step-threePageModule {}
+export class StepThreePageModule {}

@@ -23,4 +23,4 @@ const routes: Routes = [
   ],
   declarations: [ViewingSchedulePage]
 })
-export class ViewingSchedulePageModule {}
+export class ViewSchedulePageModule {}

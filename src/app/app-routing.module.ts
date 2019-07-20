@@ -6,15 +6,18 @@ const routes: Routes = [
   { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' },
   { path: 'signin', loadChildren: './signin/signin.module#SigninPageModule' },
   { path: 'filter', loadChildren: './filter/filter.module#FilterPageModule' },
-  { path: 'contract/step-one', loadChildren: './contract/step-one/step-one.module#BasicVerificationPageModule' },
-  { path: 'contract/step-two', loadChildren: './contract/step-two/step-two.module#SigningPartiesPageModule' },
-  { path: 'contract/step-three', loadChildren: './contract/step-three/step-three.module#step-threePageModule' },
-  { path: 'contract/step-four', loadChildren: './contract/step-four/step-four.module#TalkMoneyPageModule' },
-  { path: 'contract/step-five', loadChildren: './contract/step-five/step-five.module#FinalDetailsPageModule' },
+  { path: 'view-details', loadChildren: './view-details/view-details.module#ViewDetailsPageModule' },
+
   { path: 'contract/my-contracts', loadChildren: './contract/my-contracts/my-contracts.module#MyContractsPageModule' },
   { path: 'contract/view-contract', loadChildren: './contract/view-contract/view-contract.module#ViewContractPageModule' },
-  { path: 'contract/view-schedule', loadChildren: './contract/view-schedule/view-schedule.module#ViewingSchedulePageModule' },
-  { path: 'view-details', loadChildren: './view-details/view-details.module#ViewDetailsPageModule' },
+  { path: 'contract/view-schedule', loadChildren: './contract/view-schedule/view-schedule.module#ViewSchedulePageModule' },
+  { path: 'contract/step-one', loadChildren: './contract/step-one/step-one.module#StepOnePageModule' },
+  { path: 'contract/step-two', loadChildren: './contract/step-two/step-two.module#StepTwoPageModule' },
+  { path: 'contract/step-three', loadChildren: './contract/step-three/step-three.module#StepThreePageModule' },
+  { path: 'contract/step-four', loadChildren: './contract/step-four/step-four.module#StepFourPageModule' },
+  { path: 'contract/step-five', loadChildren: './contract/step-five/step-five.module#StepFivePageModule' },
+
+
 
 
 

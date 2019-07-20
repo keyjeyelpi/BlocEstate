@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-step-two',
-  templateUrl: './step-two.page.html',
-  styleUrls: ['./step-two.page.scss'],
-})
-export class SigningPartiesPage implements OnInit {
+@Component( {
+  selector : 'app-step-two' ,
+  templateUrl : './step-two.page.html' ,
+  styleUrls : ['./step-two.page.scss' ] ,
+} )
+export class StepTwoPage implements OnInit {
 
-  public persons: any = [{ "name" : { "first" : "" , "last" : "" },"address" : { "street" : "" , "city" : "" , "region" : "" , "zip" : "" , "country" : "" } , "phone" : "" }];
+  public signees: any = [];
 
   constructor() { }
 
@@ -16,11 +16,7 @@ export class SigningPartiesPage implements OnInit {
   }
 
   addSignee() {
-    this.persons.push({ "name" : { "first" : "" , "last" : "" },"address" : { "street" : "" , "city" : "" , "region" : "" , "zip" : "" , "country" : "" } , "phone" : "" });
-  }
-
-  alert() {
-    
+    this.signees.push( { "name" : { "first" : "" , "last" : "" },"address" : { "street" : "" , "city" : "" , "region" : "" , "zip" : "" , "country" : "" } , "phone" : "" } );
   }
 
 }
