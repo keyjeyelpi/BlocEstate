@@ -1,0 +1,8 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom" [ngClass]="{'blur': ( globals.isBlur() )}">
+    <ion-tab-button *ngFor="let page of pages" tab="{{ page.pageName }}" [disabled]="( globals.isBlur() == true )">
+      <ion-icon color="gradient" class="{{ page.iconClass }}"></ion-icon>
+      <ion-label>{{ page.title }}</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

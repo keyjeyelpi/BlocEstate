@@ -1,0 +1,110 @@
+<!-- <ion-header>
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="secondary">
+      <ion-button fill="clear" routerLink="/step-one">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Signing Parties</ion-title>
+  </ion-toolbar>
+</ion-header>
+ -->
+ <ion-content color="light">
+  <ion-card class="ion-text-center ion-padding" color="gradient">
+    <ion-card-title class="ion-text-bold">
+      SIGNING PARTIES
+    </ion-card-title>
+  </ion-card>
+
+  <ion-card color="white" class="ion-padding" *ngFor="let signee of signees">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-text class="ion-text-bold" color="primary">
+            NAME
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="First" [(ngModel)]="signee.name.first">
+
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="Last" [(ngModel)]="signee.name.last">
+
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-text class="ion-text-bold" color="primary">
+            ADDRESS
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="Street Address" [(ngModel)]="signee.address.street">
+
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-input placeholder="City" [(ngModel)]="signee.address.city">
+
+          </ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-input placeholder="Region" [(ngModel)]="signee.address.region">
+
+          </ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-input placeholder="Postal/Zip Code" [(ngModel)]="signee.address.zip">
+
+          </ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-select placeholder="Country" [(ngModel)]="signee.address.country">
+            <ion-select-option select="selected">Canada</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-text class="ion-text-bold" color="primary">
+            PHONE
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="### ### ####" [(ngModel)]="signee.phone.number"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-button expand="block" class="ion-margin" color="gradient" routerLink="/contract/step-three">
+    Continue
+  </ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="gradient" (click)="addSignee()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

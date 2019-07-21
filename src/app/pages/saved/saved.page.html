@@ -1,0 +1,100 @@
+<ion-header>
+
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start" color="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="map"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">Saved</ion-title>
+  </ion-toolbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        
+        <ion-segment mode="ios">
+          <ion-segment-button value="for-sale" fill="outline" mode="ios" checked>
+            <ion-label>For Sale</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="for-rent" fill="outline" mode="ios">
+            <ion-label>For Rent</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="ion-padding">
+
+    <ion-row class="ion-padding">
+      <ion-col>
+        <ion-label class="main">
+          Recent Likes
+        </ion-label>
+      </ion-col>
+      <ion-col class="ion-text-end">
+        <ion-label class="sub">
+          {{ properties.likes.length }} Homes
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding-horizontal ion-padding-bottom">
+      <ion-col *ngFor="let property of properties.likes">
+        <ion-card>
+          <img src="{{ property.imageUrl }}" alt="">
+          <ion-card-header>
+            <ion-card-title>
+              {{ property.description.address }}
+            </ion-card-title>
+            <ion-card-subtitle>
+              {{ property.description.price }}
+            </ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding">
+        <ion-col>
+          <ion-label class="main">
+            Favorites
+          </ion-label>
+        </ion-col>
+        <ion-col class="ion-text-end">
+          <ion-label class="sub">
+            {{ properties.favorites.length }} Homes
+          </ion-label>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row class="ion-padding-horizontal ion-padding-bottom">
+        <ion-col size="6" *ngFor="let property of properties.favorites">
+          <ion-card>
+            <img src="{{ property.imageUrl }}" alt="">
+            <ion-card-header>
+              <ion-card-title>
+                {{ property.description.address }}
+              </ion-card-title>
+              <ion-card-subtitle>
+                {{ property.description.price }}
+              </ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,70 @@
+.bumble-card {
+  ion-card-header {
+    ion-buttons.bumble-card-buttons {
+      z-index: 2;
+      position: absolute;
+      left: 22.5%;
+      bottom: -36px;
+      margin: auto;
+
+      .bumble-card-button {
+        height: 48px;
+        width: 48px;
+        margin-right: 12px;
+      }
+
+      .bumble-card-button-heart {
+        height: 72px;
+        width: 72px;
+        font-size: 36px;
+      }
+    }
+  }
+
+  ion-card-content {
+    background: var( --ion-color-white ) !important;
+
+    .bumble-card-description.ios {
+      margin-top: 25px;
+    }
+    .bumble-card-description.md {
+      margin-top: 45px;
+    }
+
+    ion-chip {
+      background: var( --ion-color-primary );
+
+      ion-label {
+        font-weight: bold;
+        color: var( --ion-color-white );
+      }
+    }
+  }
+}
+
+ion-fab {
+  ion-fab-list {
+    ion-fab-button {
+      ion-icon {
+        font-size: 20px;
+      }
+    }
+
+    ion-chip {
+      position: absolute;
+      right: 100%;
+
+      ion-label {
+        font-weight: bold;
+      }
+    }
+
+    ion-chip:nth-of-type(2) {
+        top: 5%;
+    }
+    ion-chip:nth-of-type(1) {
+        top: 55%;
+    }
+  }
+}
+

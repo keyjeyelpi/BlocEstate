@@ -1,0 +1,127 @@
+<ion-header [ngClass]="{'blur': ( globals.isBlur() )}">
+
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start" color="primary">
+      <ion-button [disabled]="( globals.isBlur() == true )">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="editFilter()" [disabled]="( globals.isBlur() == true )">
+        <ion-icon slot="icon-only" name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Bloc Estate</ion-title>
+  </ion-toolbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+        <ion-segment mode="ios" [disabled]="( globals.isBlur() == true )">
+          <ion-segment-button value="for-sale" fill="outline" mode="ios" checked>
+            <ion-label>For Sale</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="for-rent" fill="outline" mode="ios">
+            <ion-label>For Rent</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-header>
+
+<ion-content color="light">
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="gradient" (click)="globals.toggleBlur()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="signup();" color="white" shape="round" mode="md" class="ion-margin-top ion-margin-bottom"
+        style="border-radius: 100%; border: solid 1px var( --ion-color-danger );">
+        <ion-icon name="create" color="danger" mode="md"></ion-icon>
+      </ion-fab-button>
+      <ion-chip class="ion-padding ion-text-nowrap ion-text-uppercase" outline="false" color="dark"
+        (click)="globals.toggleBlur()">
+        <ion-label color="danger">List a Property</ion-label>
+      </ion-chip>
+
+      <ion-fab-button (click)="globals.toggleBlur()" color="white" shape="round" mode="md"
+        style="border-radius: 100%; border: solid 1px var( --ion-color-success );">
+        <ion-icon name="key" color="success" mode="md"></ion-icon>
+      </ion-fab-button>
+      <ion-chip class="ion-padding ion-text-nowrap ion-text-uppercase" outline="false" color="dark"
+        (click)="globals.toggleBlur()">
+        <ion-label color="success">Be a Landlord</ion-label>
+      </ion-chip>
+    </ion-fab-list>
+  </ion-fab>
+
+  <div [ngClass]="{'blur': ( globals.isBlur() )}">
+
+    <ion-card class="bumble-card ion-margin-top">
+
+      <ion-card-header no-padding>
+        <ion-grid no-padding>
+
+          <ion-row>
+            <ion-col size="12" no-padding>
+              <img src="{{ currentProperty.imageUrl }}" height="360px" width="100%" id="property-image-url">
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+
+
+        <ion-buttons class="bumble-card-buttons">
+          <ion-button mode="ios" class="bumble-card-button bumble-card-button-pass" fill="solid" shape="round" color="white"
+            size="large" (click)="previousProperty()" [disabled]="( globals.isBlur() == true )"
+            style="border-radius: 100%; border: solid 1px var( --ion-color-danger );">
+            <ion-icon slot="icon-only" name="close" color="danger"></ion-icon>
+          </ion-button>
+          <ion-button class="bumble-card-button bumble-card-button-heart" fill="solid" shape="round" color="white"
+            size="large" [disabled]="( globals.isBlur() == true )"
+            style="border-radius: 100%; border: solid 1px var( --ion-color-primary );">
+            <ion-icon slot="icon-only" src="assets/icon/saved.svg" color="primary"></ion-icon>
+          </ion-button>
+          <ion-button mode="ios" class="bumble-card-button bumble-card-button-check" fill="solid" shape="round" color="white"
+            size="large" (click)="nextProperty()" [disabled]="( globals.isBlur() == true )"
+            style="border-radius: 100%; border: solid 1px var( --ion-color-success );">
+            <ion-icon slot="icon-only" name="checkmark" color="success"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-card-header>
+
+      <ion-card-content color="white">
+        <ion-grid>
+          <ion-row class="bumble-card-description">
+            <ion-card-title class="ion-text-bold" id="property-description-address">
+              {{ currentProperty.description.address }}
+            </ion-card-title>
+            <!-- <ion-chip>
+              <ion-icon color="white" name="pin"></ion-icon>
+              <ion-label id="property-description-address">{{ currentProperty.description.address }}</ion-label>
+            </ion-chip> -->
+          </ion-row>
+          <ion-row>
+            <ion-card-subtitle id="property-description-price">{{ currentProperty.description.price }}
+            </ion-card-subtitle>
+            <!-- <ion-chip>
+              <ion-icon color="white" name="pricetag"></ion-icon>
+              <ion-label id="property-description-price">{{ currentProperty.description.price }}</ion-label>
+            </ion-chip>  -->
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+
+</ion-content>

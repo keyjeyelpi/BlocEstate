@@ -1,0 +1,38 @@
+ion-label.main {
+    font-weight: bolder;
+}
+
+ion-label.sub {
+    font-weight: 300;
+    font-size: 12px;
+    color: #aeaeae;
+}
+
+.text-right {
+    text-align: right;
+}
+
+ion-col ion-card {
+    margin: 0 auto !important;
+}
+
+.md ion-grid ion-card-title {
+    font-size: 15px;
+}
+
+.md ion-card-subtitle {
+    font-size: 10px;
+}
+
+.ios ion-grid ion-card-title {
+    font-size: 10px;
+}
+
+.ios ion-card-subtitle {
+    font-size: 5px;
+}
+
+div#image-container ion-img {
+    height: 100%;
+    background: #f9f9f9;
+}
