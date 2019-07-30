@@ -22,4 +22,7 @@ ion-icon {
       mask-image: url(/assets/icon/profile.svg);
    }
 
+   &[class*="custom-icon-cake"] {
+      mask-image: url(/assets/icon/cake.svg);
+   }
 }

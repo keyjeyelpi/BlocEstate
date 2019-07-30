@@ -1,0 +1,38 @@
+ion-card {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0px;
+    margin: 0px;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scroll {
+        overflow: auto;
+    }
+
+    ion-card {
+        box-sizing: border-box;
+        display: inline-block;
+
+        * {
+            white-space: initial;
+        }
+    }
+
+    ion-card.md {
+        width: 95%;
+    }
+
+    ion-card.ios {
+        width: 91%;
+    }
+
+}

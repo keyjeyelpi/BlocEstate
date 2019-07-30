@@ -16,6 +16,10 @@ const routes: Routes = [
   { path: 'contract/view-contract', loadChildren: './pages/contract/view-contract/view-contract.module#ViewContractPageModule' },
   { path: 'contract/view-schedule', loadChildren: './pages/contract/view-schedule/view-schedule.module#ViewSchedulePageModule' },
 
+  { path: 'saved/recent-likes', loadChildren: './pages/saved/for-sale/recent-likes/recent-likes.module#RecentLikesPageModule' },
+  { path: 'saved/favorites', loadChildren: './pages/saved/for-sale/favorites/favorites.module#FavoritesPageModule' },
+  { path: 'property-details', loadChildren: './pages/property-details/property-details.module#PropertyDetailsPageModule' },
+
   // { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   // { path: 'test', loadChildren: './pages/test/test.module#TestPageModule' }
 ];

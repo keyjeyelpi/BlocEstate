@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import * as $ from 'jquery';
+import { ModalController } from '@ionic/angular';
+import { PropertyDetailsPage } from '../property-details/property-details.page';
+import { RecentLikesPage } from './for-sale/recent-likes/recent-likes.page';
+import { FavoritesPage } from './for-sale/favorites/favorites.page';
 
 @Component({
   selector: 'app-saved',
@@ -7,9 +12,12 @@ import { Component } from '@angular/core';
 })
 export class SavedPage {
 
+  content: any = {}
+
   properties = {
     likes: [
       {
+        id:  `recent-likes-1`,
         imageUrl: `assets/imgs/etc/property-1.jpg`,
         description: {
           address: `66 Corusant Way, King West, Toronto`,
@@ -17,37 +25,42 @@ export class SavedPage {
         }
       },
       {
-        imageUrl: `assets/imgs/etc/property-1.jpg`,
+        id:  `recent-likes-2`,
+        imageUrl: `assets/imgs/etc/property-2.jpg`,
         description: {
           address: `66 Corusant Way, King West, Toronto`,
           price: `$799,999 - Maintenance Fee $420`
         }
-      },
+      }
     ],
     favorites: [
       {
-        imageUrl: `assets/imgs/etc/property-2.jpg`,
+        id:  `favorites-1`,
+        imageUrl: `assets/imgs/estate/3.jpg`,
         description: {
           address: `66 Corusant Way, King West, Toronto`,
           price: `$799,999 - Maintenance Fee $420`
         }
       },
       {
-        imageUrl: `assets/imgs/etc/property-2.jpg`,
+        id:  `favorites-2`,
+        imageUrl: `assets/imgs/estate/4.jpg`,
         description: {
           address: `66 Corusant Way, King West, Toronto`,
           price: `$799,999 - Maintenance Fee $420`
         }
       },
       {
-        imageUrl: `assets/imgs/etc/property-2.jpg`,
+        id:  `favorites-3`,
+        imageUrl: `assets/imgs/estate/2.jpg`,
         description: {
           address: `66 Corusant Way, King West, Toronto`,
           price: `$799,999 - Maintenance Fee $420`
         }
       },
       {
-        imageUrl: `assets/imgs/etc/property-2.jpg`,
+        id:  `favorites-4`,
+        imageUrl: `assets/imgs/estate/1.jpg`,
         description: {
           address: `66 Corusant Way, King West, Toronto`,
           price: `$799,999 - Maintenance Fee $420`
@@ -56,9 +69,53 @@ export class SavedPage {
     ]
   };
 
-  constructor() { }
+  constructor( public modalController : ModalController ) { }
 
   ngOnInit() {
+  }
+
+  animateCard( id ) {
+    let animation: string = `slideUp`
+
+    $( '#' + id ).addClass('magictime');
+    $( '#' + id ).addClass(animation);
+
+    setTimeout(() => {
+      $( '#' + id ).removeClass(animation);
+    }, 750);
+  }
+
+  async showPropertyDetails( propertyDetails ) {
+    this.animateCard( propertyDetails.id )
+
+    const modal = await this.modalController.create({
+      component: PropertyDetailsPage,
+      componentProps: {
+        details : propertyDetails
+      }
+    });
+
+    setTimeout(() => {      
+      return modal.present();
+    }, 750);
+  }
+
+  async showMore( type ) {
+    
+    if( type == 'like' ) {
+      this.content = {
+        component: RecentLikesPage,
+        componentProps: this.properties.likes
+      }
+    } else {
+      this.content = {
+        component: FavoritesPage,
+        componentProps: this.properties.favorites
+      }
+    }
+
+    const modal = await this.modalController.create( this.content );
+    return modal.present();
   }
 
 }

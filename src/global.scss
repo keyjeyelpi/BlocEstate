@@ -62,3 +62,11 @@ a {
     align-content: center !important;
     align-items: center !important;
 }
+
+ion-card {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+    ion-card-header.img-container img {
+        animation-timing-function: linear;
+    }
+}

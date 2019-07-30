@@ -1,14 +1,5 @@
-.primary {
-    background: --ion-color-primary;
-}
-
-.bold {
-    font-weight: bolder;
-    font-size: 12px;
-}
-
 .underline {
-    border-bottom: solid 1px #cecece;
+    border-bottom: solid 1px rgb( 230, 230, 230 );
 }
 
 .avatar-large {
@@ -17,6 +8,19 @@
     width: 125px;
 }
 
-.text-center{
-    text-align: center;
+.fs-15, ion-input, ion-item ion-textarea, ion-item ion-datetime {
+    font-size: 15px;
+}
+
+ion-item ion-icon {
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+ion-item ion-datetime {
+    padding: 16px 0px;
+}
+
+ion-input::placeholder {
+    color: rgb( 230, 230, 230);
 }

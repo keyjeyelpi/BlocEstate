@@ -12,6 +12,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { EditProfilePageModule } from './pages/profile/edit-profile/edit-profile.module';
 import { EditFilterPageModule } from './pages/home/edit-filter/edit-filter.module';
 
+import { PropertyDetailsPageModule } from './pages/property-details/property-details.module';
+import { RecentLikesPageModule } from './pages/saved/for-sale/recent-likes/recent-likes.module';
+import { FavoritesPageModule } from './pages/saved/for-sale/favorites/favorites.module';
+
 import { Globals } from './classes/globals';
 import { SignupPageModule } from './pages/signup/signup.module';
 import { SigninPageModule } from './pages/signin/signin.module';
@@ -25,6 +29,9 @@ import { SigninPageModule } from './pages/signin/signin.module';
     AppRoutingModule,
     EditProfilePageModule,
     EditFilterPageModule,
+    PropertyDetailsPageModule,
+    RecentLikesPageModule,
+    FavoritesPageModule,
     SignupPageModule,
     SigninPageModule
   ],

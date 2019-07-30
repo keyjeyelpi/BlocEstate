@@ -1,4 +1,4 @@
-<ion-header no-border>
+<ion-header lines="none" no-border>
   <ion-toolbar mode="ios" color="gradient">
     <ion-buttons slot="secondary">
       <ion-button fill="clear" (click)="closeModal()">
@@ -14,7 +14,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-no-padding">
+<ion-content color="light" class="ion-no-padding">
   <ion-item color="gradient">
     <ion-grid class="ion-padding-vertical">
       <ion-row>
@@ -25,135 +25,92 @@
         </ion-col>
       </ion-row>
       <ion-row class="ion-padding-top">
-        <ion-col class="text-center">
-          <ion-label class="bold">
+        <ion-col class="ion-text-center">
+          <ion-text class="ion-text-bold fs-15">
             PROFILE PHOTO
-          </ion-label>
+          </ion-text>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-item>
 
-  <ion-card class="ion-padding">
-    <ion-grid class="no-padding">
-      <ion-row>
-        <ion-col>
-          <ion-label class="bold">
-            FIRST NAME
-          </ion-label>
-          <ion-input class="underline" value="Kim Joseph">
+  <ion-item color="white" lines="none" class="underline">
+    <ion-icon name="person" color="primary"></ion-icon>
+    <ion-text color="primary" class="fs-15 ion-text-bold">
+      NAME
+    </ion-text>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline">
+    <ion-input placeholder="First"></ion-input>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline ion-margin-bottom">
+    <ion-input placeholder="Last"></ion-input>
+  </ion-item>
 
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-label class="bold">
-            LAST NAME
-          </ion-label>
-          <ion-input class="underline" value="Penaloza">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
+  <ion-item color="white" lines="none" class="underline">
+    <ion-icon color="primary" name="quote"></ion-icon>
+    <ion-text color="primary" class="fs-15 ion-text-bold">
+      ABOUT ME
+    </ion-text>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline ion-margin-bottom">
+    <ion-textarea autoGrow="true" placeholder="Enter Status Here..." style="min-height: 150px;"></ion-textarea>
+  </ion-item>
 
-  <ion-card class="ion-padding">
-    <ion-grid class="no-padding">
-      <ion-row>
-        <ion-col>
-          <ion-label class="bold">
-            EMAIL
-          </ion-label>
-          <ion-input class="underline" value="kj.penaloza@gmail.com">
-          </ion-input>
-        </ion-col>
-      </ion-row>
+  <ion-item color="white" lines="none" class="underline">
+    <ion-icon color="primary" class="custom-icon-cake"></ion-icon>
+    <ion-text color="primary" class="fs-15 ion-text-bold">
+      BIRTHDAY
+    </ion-text>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline ion-margin-bottom">
+    <ion-datetime placeholder="Jan 01, 1971">
+    </ion-datetime>
+  </ion-item>
 
-      <ion-row>
-        <ion-col>
-          <ion-label class="bold">
-            BIRTHDAY
-          </ion-label>
-          <ion-row class="underline no-padding">
-            <ion-col class="no-padding">
-              <ion-select placeholder="Month">
-                <ion-select-option>
-                  January
-                </ion-select-option>
-                <ion-select-option>
-                  February
-                </ion-select-option>
-                <ion-select-option>
-                  March
-                </ion-select-option>
-                <ion-select-option>
-                  April
-                </ion-select-option>
-                <ion-select-option>
-                  May
-                </ion-select-option>
-                <ion-select-option>
-                  June
-                </ion-select-option>
-                <ion-select-option>
-                  July
-                </ion-select-option>
-                <ion-select-option>
-                  August
-                </ion-select-option>
-                <ion-select-option>
-                  September
-                </ion-select-option>
-                <ion-select-option>
-                  October
-                </ion-select-option>
-                <ion-select-option>
-                  November
-                </ion-select-option>
-                <ion-select-option>
-                  December
-                </ion-select-option>
-              </ion-select>
-            </ion-col>
-            <ion-col>
-              <ion-select placeholder="Day">
-                <ion-select-option>
-                  1
-                </ion-select-option>
-              </ion-select>
-            </ion-col>
-            <ion-col>
-              <ion-select placeholder="Year">
-                <ion-select-option>
-                  1
-                </ion-select-option>
-              </ion-select>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-      </ion-row>
+  <ion-item color="white" lines="none" class="underline">
+    <ion-icon color="primary" name="call"></ion-icon>
+    <ion-text color="primary" class="fs-15 ion-text-bold">
+      PHONE
+    </ion-text>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline ion-margin-bottom">
+    <ion-input placeholder="(999) 999 9999" type="tel"></ion-input>
+  </ion-item>
 
-      <ion-row>
-        <ion-col>
-          <ion-label class="bold">
-            JOB
-          </ion-label>
-          <ion-input class="underline" value="Front-End Developer">
-          </ion-input>
-        </ion-col>
-      </ion-row>
+  <ion-item color="white" lines="none" class="underline">
+    <ion-icon color="primary" name="mail"></ion-icon>
+    <ion-text color="primary" class="fs-15 ion-text-bold">
+      EMAIL
+    </ion-text>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline ion-margin-bottom">
+    <ion-input placeholder="email@example.com" type="email"></ion-input>
+  </ion-item>
 
-      <ion-row>
-        <ion-col>
-          <ion-label class="bold">
-            LOCATION
-          </ion-label>
-          <ion-input class="underline" value="Nueva Ecija, Ph">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
+  <ion-item color="white" lines="none" class="underline">
+    <ion-icon color="primary" name="pricetags"></ion-icon>
+    <ion-text color="primary" class="fs-15 ion-text-bold">
+      JOB
+    </ion-text>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline">
+    <ion-input placeholder="Title"></ion-input>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline ion-margin-bottom">
+    <ion-textarea autoGrow="true" placeholder="Enter Job Description Here..." style="min-height: 150px;"></ion-textarea>
+  </ion-item>
 
+  <ion-item color="white" lines="none" class="underline">
+    <ion-icon color="primary" name="pin"></ion-icon>
+    <ion-text color="primary" class="fs-15 ion-text-bold">
+      LOCATION
+    </ion-text>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline">
+    <ion-input placeholder="Title"></ion-input>
+  </ion-item>
+  <ion-item color="white" lines="none" class="underline ion-margin-bottom">
+    <ion-textarea autoGrow="true" placeholder="Enter Location Description Here..." style="min-height: 150px;"></ion-textarea>
+  </ion-item>
 </ion-content>
