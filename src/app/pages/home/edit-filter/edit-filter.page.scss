@@ -1,82 +1,39 @@
-.input-icon {
-  font-size: 150%;
-  padding-right: 10px;
+ion-text#title {
+  font-size: 30px;
+  font-family: 'SF-Pro-Display-Black';
+  margin-bottom: 10px;
 }
 
-.location-icon {
-  font-size: 150%;
-  display: inline-block;
-  vertical-align: middle;
+ion-text#subtitle {
+  font-size: 14px;
+  margin-bottom: 30px;
 }
 
-.location-text {
-  display: inline-block;
-  vertical-align: middle;
+ion-label {
+  color: #808080;
 }
 
-.button-col-left {
-  padding-right: 0;
-}
-.button-col-right {
-  padding-left: 0;
-}
-.button-left {
-  margin-right: 0;
-}
-.button-right {
-  margin-left: 0;
+ion-card {
+  margin: 16px 8px;
 }
 
-.find-button {
-  width: 200px;
+ion-card.ion-type {
+  height: 150px;
 }
 
-ion-button {
-  --box-shadow: none;
-}
+ion-card#location {
+  line-height: 60px;
+  height: 60px;
+  padding: 0px 16px;
 
-ion-content {
-  padding: 10%;
-}
+  ion-text {
+    font-size: 15px;
+    height: 25px;
+  }
 
-ion-icon {
-  font-size: 50px;
-}
-
-ion-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 90px 1px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-ion-select {
-  width: 100%;
-  max-width: 100%;
-}
-
-ion-range {
-  --knob-size: 30px;
-}
-
-ion-button {
-  text-transform: none;
-}
-
-.input-group-divider {
-  padding-bottom: 20px;
-}
-
-.button-logo {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.filter-background-text {
-  position: absolute;
-  top: 0;
-  width: 100%;
+  ion-icon {
+    margin: 12px 0px;
+    height: 35px;
+    width: 35px;
+  }
 }

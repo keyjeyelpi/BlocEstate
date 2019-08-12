@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { SignupPage } from '../../signup/signup.page';
 
 @Component({
   selector: 'app-edit-filter',
@@ -9,11 +10,17 @@ import { ModalController } from '@ionic/angular';
 export class EditFilterPage implements OnInit {
 
   listType: string = 'sale';
-  priceRange: any = { lower: 0, upper: 100000 };
+  buildingType: string = 'house';
+  priceRange: any = { lower: 0, upper: 1000000 };
   priceRangeMin: number = 0;
-  priceRangeMax: number = 100000;
+  priceRangeMax: number = 1000000;
   currentMin: number;
   currentMax: number;
+  buildings: any = [
+    {"type": "house"},
+    {"type": "condominium"},
+    {"type": "apartment"}
+  ]
 
   constructor(
     public modalController: ModalController
@@ -34,6 +41,13 @@ export class EditFilterPage implements OnInit {
   changeRangeValues(priceRange) {
     this.currentMin = priceRange.lower;
     this.currentMax = priceRange.upper;
+  }
+
+  async signup() {
+    const modal = await this.modalController.create( {
+      component: SignupPage
+    } );
+    return modal.present();
   }
 
 }

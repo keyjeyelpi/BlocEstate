@@ -1,116 +1,89 @@
 <ion-header no-border>
-  <ion-toolbar mode="ios" color="gradient2">
+  <ion-toolbar mode="ios">
     <ion-buttons slot="secondary">
-      <ion-button fill="clear" (click)="closeModal()">
-        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      <ion-button fill="clear" shape="round" (click)="closeModal()">
+        <ion-icon slot="icon-only" name="arrow-back" mode="ios"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Edit Filter</ion-title>
+
+    <ion-title>Filter</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content no-padding>
+<ion-content class="ion-padding">
 
-  <div no-padding class="ion-no-margin">
-    <img src="assets/imgs/etc/filter-background.svg">
-    
-    <div class="ion-padding ion-text-center filter-background-text">
-      <ion-text color="white">
-        <h1 class="ion-text-center">Hello, let's get started!</h1>
-        <h6 class="ion-text-center">What brings you to Bloc Estate today?</h6>
-      </ion-text>
-      
-      <div class="input-group-divider">
-        <ion-row>
-          <ion-col class="button-col-left">
-            <ion-button class="button-left" [color]="listType == 'sale' ? 'primary' : 'white'" (click)="listType = 'sale'" expand="full">For Sale</ion-button>
-          </ion-col>
-          <ion-col class="button-col-right">
-            <ion-button class="button-right" [color]="listType == 'rent' ? 'primary' : 'white'" (click)="listType = 'rent'" expand="full">For Rent</ion-button>
-          </ion-col>
-        </ion-row>
-      </div>
-    </div>
-  </div>
-
-  <ion-grid>
-    
-    <!-- <ion-row>
-      <ion-col size="12">
-      </ion-col>
-    </ion-row> -->
-
-    <!-- <ion-row>
-      <ion-col size="12">
-      </ion-col>
-    </ion-row> -->
-
+  <ion-grid class="ion-padding">
     <ion-row>
-      <ion-col size="12">
-        <div class="input-group-divider">
-          <ion-text>Property Type</ion-text>
-          <ion-item>
-            <ion-label>Property Type</ion-label>
-            <ion-select placeholder="Select property type">
-              <ion-select-option value="1">Option 1</ion-select-option>
-              <ion-select-option value="2">Option 2</ion-select-option>
-              <ion-select-option value="3">Option 3</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </div>
-      </ion-col>
+      <ion-text id="title" color="primary">Hello, let's get started!</ion-text>
     </ion-row>
 
     <ion-row>
-      <ion-col size="12">
-        <div class="input-group-divider">
-          <ion-text>Location</ion-text>
-          <ion-item>  
-            <ion-icon name="search" class="input-icon" item-start></ion-icon>
-            <ion-input placeholder="Search Location"></ion-input>
-          </ion-item>
+      <ion-text id="subtitle">What brings you to Bloc Estate today?</ion-text>
+    </ion-row>
 
-          <ion-row>
-            <ion-col text-center>
-              <ion-icon name="pin" class="location-icon"></ion-icon>
-              <ion-text class="location-text">Or use your current location</ion-text>
-            </ion-col>
-          </ion-row>
-        </div>
+    <ion-row no-padding>
+      <ion-label>Are you looking for...</ion-label>
+    </ion-row>
+
+    <ion-row id="looking-for" no-padding class="ion-margin-bottom">
+      <ion-col no-margin no-padding size="6">
+        <ion-card [color]="listType == 'sale' ? 'primary' : 'white'" class="ion-padding ion-text-center"
+          color="gradient" (click)="listType = 'sale'">
+          <ion-card-title class="ion-text-bold">Sale</ion-card-title>
+        </ion-card>
+      </ion-col>
+      <ion-col no-margin no-padding size="6">
+        <ion-card [color]="listType == 'rent' ? 'primary' : 'white'" class="ion-padding ion-text-center"
+          (click)="listType = 'rent'">
+          <ion-card-title class="ion-text-bold">Rent</ion-card-title>
+        </ion-card>
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col size="12">
-        <div class="input-group-divider">
-          <ion-text>Price Range</ion-text>
-          <ion-text float-right>${{ currentMin }} - ${{ currentMax }}</ion-text>
-            
-          <ion-item>  
-            <ion-range [min]="priceRangeMin" [max]="priceRangeMax" step="5000" 
-              [(ngModel)]="priceRange" (ionChange)="changeRangeValues(priceRange)" 
-              color="primary" dualKnobs="true"></ion-range>
-          </ion-item>
-        </div>
+    <ion-row no-padding>
+      <ion-label>Type</ion-label>
+    </ion-row>
+
+    <ion-row id="type" class="ion-margin-bottom">
+      <ion-col *ngFor="let building of buildings" no-margin no-padding size="4">
+        <ion-card [color]="buildingType == building.type ? 'primary' : 'white'"
+          class="ion-padding ion-text-center ion-type" (click)="buildingType = building.type">
+          <ion-icon style="width: 100%; height: 65%;" class="custom-icon-{{building.type}}"></ion-icon>
+          <ion-text style="font-size: 12px;" class="ion-text-bold">{{building.type | uppercase}}</ion-text>
+        </ion-card>
       </ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row no-padding>
+      <ion-label>Location</ion-label>
+    </ion-row>
+
+    <ion-row class="ion-margin-bottom">
       <ion-col size="12">
-        <div class="input-group-divider">
-          <ion-row>
-            <ion-col text-center>
-                <ion-button class="find-button" color="gradient" [routerLink]="['/signup']">
-                  Find
-                  <ion-icon slot="end" name="arrow-forward" size="small"></ion-icon>
-                </ion-button>
-            </ion-col>
-          </ion-row>
-          
-        </div>
+        <ion-card id="location" color="white" class="ion-padding">
+          <ion-text class="ion-text-bold">Where do you want to Search?</ion-text>
+          <ion-icon float-right name="pin" color="primary"></ion-icon>
+        </ion-card>
       </ion-col>
+    </ion-row>
+
+    <ion-row no-padding>
+      <ion-col size="12">
+        <ion-label>Price Range</ion-label>
+        <ion-text class="ion-text-bold" float-right>${{ currentMin | number : fractionSize }} -
+          {{ currentMax | number : fractionSize }}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-margin-bottom">
+      <ion-range id="priceRange" class="ion-margin" [min]="priceRangeMin" [max]="priceRangeMax" step="5000" [(ngModel)]="priceRange"
+        (ionChange)="changeRangeValues(priceRange)" color="primary" dualKnobs="true"></ion-range>
     </ion-row>
 
   </ion-grid>
+
+  <ion-button class="ion-margin ion-text-bold" size="large" color="primary" expand="block" (click)="signup()">
+    Apply Filter
+  </ion-button>
 
 </ion-content>
