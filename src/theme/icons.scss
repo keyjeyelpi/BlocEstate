@@ -1,0 +1,40 @@
+ion-icon {
+   &[class*="custom-"] {
+      mask-size: contain;
+      mask-position: 50% 50%;
+      mask-repeat: no-repeat;
+      background: currentColor;
+      width: 1em;
+      height: 1em;
+   }
+
+
+
+   &[class*="custom-icon-home"] {
+      mask-image: url(/assets/icon/home.svg);
+   }
+
+   &[class*="custom-icon-saved"] {
+      mask-image: url(/assets/icon/saved.svg);
+   }  
+
+   &[class*="custom-icon-profile"] {
+      mask-image: url(/assets/icon/profile.svg);
+   }
+
+   &[class*="custom-icon-buyer"] {
+      mask-image: url(/assets/icon/buyer.svg);
+   }
+
+   &[class*="custom-icon-seller"] {
+      mask-image: url(/assets/icon/seller.svg);
+   }  
+
+   &[class*="custom-icon-chat-support"] {
+      mask-image: url(/assets/icon/chat-support.svg);
+   }  
+
+   &[class*="custom-icon-cake"] {
+      mask-image: url(/assets/icon/cake.svg);
+   }
+}
