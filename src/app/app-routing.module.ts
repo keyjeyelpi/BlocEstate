@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'signin', loadChildren: './pages/signin/signin.module#SigninPageModule' },
 
   { path: 'contract/my-contracts', loadChildren: './pages/contract/my-contracts/my-contracts.module#MyContractsPageModule' },
-  { path: 'contract/step-one', loadChildren: './pages/contract/step-one/step-one.module#StepOnePageModule' },
+ { path: 'contract/step-one', loadChildren: './pages/contract/step-one/step-one.module#StepOnePageModule' },
   { path: 'contract/step-two', loadChildren: './pages/contract/step-two/step-two.module#StepTwoPageModule' },
   { path: 'contract/step-three', loadChildren: './pages/contract/step-three/step-three.module#StepThreePageModule' },
   { path: 'contract/step-four', loadChildren: './pages/contract/step-four/step-four.module#StepFourPageModule' },
@@ -19,6 +19,8 @@ const routes: Routes = [
   { path: 'saved/recent-likes', loadChildren: './pages/saved/for-sale/recent-likes/recent-likes.module#RecentLikesPageModule' },
   { path: 'saved/favorites', loadChildren: './pages/saved/for-sale/favorites/favorites.module#FavoritesPageModule' },
   { path: 'property-details', loadChildren: './pages/property-details/property-details.module#PropertyDetailsPageModule' },
+  { path: 'kyc', loadChildren: './pages/kyc/kyc.module#KycPageModule' }
+
 
   // { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   // { path: 'test', loadChildren: './pages/test/test.module#TestPageModule' }

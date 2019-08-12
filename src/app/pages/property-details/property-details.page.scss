@@ -1,7 +1,22 @@
 ion-card {
     margin-top: 8px;
     margin-bottom: 8px;
-  }
+
+    ion-text {
+        color: #482E3E;
+    }
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    color: #B4B7BD;
+    font-weight: bold;
+}
 
 .container {
     width: 100%;
@@ -35,4 +50,26 @@ ion-card {
         width: 91%;
     }
 
+}
+
+ion-fab {
+    ion-fab-list.fab-list-active {
+        display: inline-block;
+        text-align: right;
+        right: 0px;
+
+        ion-button {
+            line-height: 20px;
+            ion-icon {
+                height: 20px;
+                width: 20px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+
+            ion-label {
+                vertical-align: middle;
+            }
+        }
+    }
 }

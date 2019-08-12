@@ -13,36 +13,35 @@
 @import '~magic.css/assets/scss/magic.scss';
 
 @font-face {
-    font-family: open-sans;
-    src: url( assets/fonts/OpenSans-Regular.ttf );
+    font-family: 'sf-pro-display';
+    src: url( './assets/fonts/SF-Pro-Display-Regular.otf' );
 }
 
 @font-face {
-    font-family: open-sans-bold;
-    src: url( assets/fonts/OpenSans-Bold.ttf );
+    font-family: 'sf-pro-display-bold';
+    src: url( './assets/fonts/SF-Pro-Display-Bold.otf' );
 }
 
 @font-face {
-    font-family: open-sans-light;
-    src: url( assets/fonts/OpenSans-Light.ttf );
+    font-family: 'sf-pro-display-light';
+    src: url( './assets/fonts/SF-Pro-Display-Light.otf' );
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@font-face {
+    font-family: 'sf-pro-display-black';
+    src: url( './assets/fonts/SF-Pro-Display-Black.otf' );
+}
 
 * {
-    font-family: open-sans;
+    font-family: sf-pro-display;
 }
 
 ion-title {
-    font-family: open-sans-bold;
+    font-family: sf-pro-display-black;
 }
 
 .ion-text-bold {
-    font-family: open-sans-bold;
-}
-
-ion-button {
-    font-family: 'Lato', sans-serif;
+    font-family: sf-pro-display-bold;
 }
 
 .primary-gradient {
@@ -69,4 +68,12 @@ ion-card {
     ion-card-header.img-container img {
         animation-timing-function: linear;
     }
+}
+
+*[mode="md"] ion-card {
+    border-radius: 8px !important;
+}
+
+*[mode="ios"] ion-card {
+    border-radius: 16px !important;
 }

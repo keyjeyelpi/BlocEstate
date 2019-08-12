@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, PopoverController } from '@ionic/angular';
 import { ViewContractPage } from '../view-contract/view-contract.page';
-import { PopoverComponent } from './popover/popover.component';
+import { StepOnePage } from '../step-one/step-one.page';
+import { PopoverComponent } from '../popover/popover.component';
 
 @Component({
   selector: 'app-my-contracts',
@@ -129,13 +130,31 @@ export class MyContractsPage implements OnInit {
 
   public cardRemoval: boolean = true
 
-  async showInfo(contract_information) {
+  async showInfo( contract_information ) {
     const modal = await this.modalController.create({
       component: ViewContractPage,
       componentProps: {
         contract_information: contract_information
       }
     })
+    return await modal.present()
+  }
+
+  async showContract(contract_information) {
+    const modal = await this.modalController.create({
+      component: StepOnePage,
+      componentProps: {
+        id: contract_information.id
+      }
+    })
+
+    modal.onDidDismiss()
+    .then(( result ) => {
+      if( result.data.componentProps.confirmation == true ) {
+        this.removeCard( result.data.componentProps.id , 'approved' )
+      }
+    });
+
     return await modal.present()
   }
 
@@ -158,27 +177,39 @@ export class MyContractsPage implements OnInit {
 
   async cardPopover( id ) {
     const popover = await this.popoverController.create({
-      component: PopoverComponent
+      component: PopoverComponent,
+      componentProps: {
+        title: 'Are you sure you want to delete your pending contract?',
+        subtitle: 'All contract details saved will be deleted.'
+      }
     })
 
     popover.onDidDismiss()
     .then(( result ) => {
-      this.cardRemoval = result.data.componentProps.delete
+      this.cardRemoval = result.data.componentProps.confirmation
 
       if( this.cardRemoval == true ) {
-        this.removeCard( id )
+        this.removeCard( id , 'pending' )
       }
     });
 
     return await popover.present()
   }
 
-  removeCard( id ) {
+  removeCard( id, type ) {
 
-    this.pendingObject = this.pendings.filter( card => ( card || { } ).id === id )
-    this.pendingArchived.push( this.pendingObject[0] )
-    this.pendings = this.pendings.filter( card => ( card || { } ).id !== id )
-  
+    if( type == 'approved'){
+
+      this.pendingObject = this.approved.filter( card => ( card || { } ).id === id )
+      this.paid.push( this.pendingObject[0] )
+      this.approved = this.approved.filter( card => ( card || { } ).id !== id )  
+
+    } else if ( type == 'pending' ) {
+      this.pendingObject = this.pendings.filter( card => ( card || { } ).id === id )
+      this.pendingArchived.push( this.pendingObject[0] )
+      this.pendings = this.pendings.filter( card => ( card || { } ).id !== id )  
+    }
+
   }
 
 }

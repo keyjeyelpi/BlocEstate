@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PopoverController } from '@ionic/angular';
+import { PopoverController, NavParams } from '@ionic/angular';
 
 @Component({
   selector: 'app-popover',
@@ -8,15 +8,21 @@ import { PopoverController } from '@ionic/angular';
 })
 export class PopoverComponent implements OnInit {
 
-  constructor( public popoverController : PopoverController ) { }
+  public title : string
+  public subtitle : string
 
-  ngOnInit() {}
+  constructor( public popoverController : PopoverController, public navParams : NavParams ) { }
+
+  ngOnInit() {
+    this.title = this.navParams.data.title
+    this.subtitle = this.navParams.data.subtitle
+  }
 
   deleteCard( value : boolean ) {
     
     this.popoverController.dismiss({
       componentProps : {
-        delete : value
+        confirmation : value
       }
     });
   

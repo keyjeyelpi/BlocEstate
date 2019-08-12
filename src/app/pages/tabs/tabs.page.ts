@@ -23,6 +23,11 @@ export class TabsPage implements OnInit {
       pageName: `profile`,
       title: `Profile`,
       iconClass: `custom-icon-profile`
+    },
+    {
+      pageName: `chat-support`,
+      title: `Chat Support`,
+      iconClass: `custom-icon-chat-support`
     }
   ];
 

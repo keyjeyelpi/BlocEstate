@@ -20,18 +20,35 @@ import { Globals } from './classes/globals';
 import { SignupPageModule } from './pages/signup/signup.module';
 import { SigninPageModule } from './pages/signin/signin.module';
 
+import { ViewContractPageModule } from './pages/contract/view-contract/view-contract.module';
+import { StepOnePageModule } from './pages/contract/step-one/step-one.module';
+import { StepTwoPageModule } from './pages/contract/step-two/step-two.module';
+import { StepThreePageModule } from './pages/contract/step-three/step-three.module';
+import { StepFourPageModule } from './pages/contract/step-four/step-four.module';
+import { StepFivePageModule } from './pages/contract/step-five/step-five.module';
+import { PopoverComponent } from './pages/contract/popover/popover.component';
+
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent , PopoverComponent],
+  entryComponents: [ PopoverComponent ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
+    HttpClientModule,
     AppRoutingModule,
     EditProfilePageModule,
     EditFilterPageModule,
     PropertyDetailsPageModule,
     RecentLikesPageModule,
     FavoritesPageModule,
+    ViewContractPageModule,
+    StepOnePageModule,
+    StepTwoPageModule,
+    StepThreePageModule,
+    StepFourPageModule,
+    StepFivePageModule,
     SignupPageModule,
     SigninPageModule
   ],

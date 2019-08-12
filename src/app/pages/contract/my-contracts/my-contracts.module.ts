@@ -5,8 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MyContractsPage } from './my-contracts.page';
-import { ViewContractPage } from '../view-contract/view-contract.page';
-import { PopoverComponent } from '../my-contracts/popover/popover.component';
 
 const routes: Routes = [ {
     path : '',
@@ -20,7 +18,6 @@ const routes: Routes = [ {
     IonicModule,
     RouterModule.forChild( routes )
   ],
-  entryComponents: [ViewContractPage , PopoverComponent],
-  declarations : [ MyContractsPage , ViewContractPage , PopoverComponent ],
+  declarations : [ MyContractsPage ],
 } )
 export class MyContractsPageModule { }

@@ -1,17 +1,17 @@
-<!-- <ion-header>
-  <ion-toolbar class="ion-text-center">
-    <ion-title>Basic Verification</ion-title>
+<ion-header no-border>
+  <ion-toolbar mode="ios">
+
+    <ion-buttons slot="secondary">
+      <ion-button fill="clear" color="primary" (click)="closeModal( false )">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Step 1. Buyer Confirmation</ion-title>
   </ion-toolbar>
 </ion-header>
- -->
 
 <ion-content color="light">
-  <ion-card class="ion-text-center ion-padding" color="gradient">
-    <ion-card-title class="ion-text-bold">
-      BASIC VERIFICATION
-    </ion-card-title>
-  </ion-card>
-
   <ion-card color="white">
     <ion-card-content class="ion-text-justify">
       <ion-text class="ion-text-center ion-text-bold" color="primary">
@@ -40,7 +40,7 @@
           <ion-checkbox color="primary"></ion-checkbox>
         </ion-col>
         <ion-col size="11" class="ion-padding-horizontal ion-text-justify">
-          <p>I verifythat all parties signatory to this offer have the mental capacity to read and sign this offer and
+          <p>I verify that all parties signatory to this offer have the mental capacity to read and sign this offer and
             that those same parties possess the financial means to pursue the intent of purchasing this property.</p>
         </ion-col>
       </ion-row>
@@ -57,13 +57,13 @@
     </ion-grid>
   </ion-card>
 
-  <ion-button expand="block" color="gradient" class="ion-margin" routerLink="/contract/step-two">
+  <ion-button expand="block" color="gradient" class="ion-margin" (click)="cardPopover()">
     Continue
   </ion-button>
 
-  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+  <!-- <ion-fab vertical="bottom" horizontal="start" slot="fixed">
     <ion-fab-button color="gradient" routerLink="/contract/my-contracts">
       <ion-icon name="arrow-back"></ion-icon>
     </ion-fab-button>
-  </ion-fab>
+  </ion-fab> -->
 </ion-content>

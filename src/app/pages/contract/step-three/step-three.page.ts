@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController, NavParams } from '@ionic/angular';
+import { StepFourPage } from '../step-four/step-four.page';
 
 @Component({
   selector: 'app-step-three',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepThreePage implements OnInit {
 
-  constructor() { }
+  constructor(public modalController : ModalController, public navParams : NavParams) { }
+
+  async closeModal() {
+    this.modalController.dismiss();
+  }
+
+  async nextStep() {
+    this.closeModal();
+    const modal = await this.modalController.create( {
+      componentProps: {
+        id : this.navParams.data.id
+      },
+      component: StepFourPage
+    } );
+    return modal.present();
+  }
 
   ngOnInit() {
   }

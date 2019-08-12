@@ -1,6 +1,8 @@
 export class Globals {
 
-    public blur = false; 
+    public blur = false;
+
+    public propertyDetails: any = []
 
     constructor() {
         this.blur = false;
@@ -10,7 +12,7 @@ export class Globals {
         return this.blur;
     }
 
-    toggleBlur(){
-        this.blur = ! this.blur;
-   }
+    toggleBlur() {
+        this.blur = !this.blur;
+    }
 }
