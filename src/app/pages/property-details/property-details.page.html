@@ -2,7 +2,7 @@
   <ion-toolbar mode="ios">
     <ion-buttons slot="secondary">
       <ion-button fill="clear" (click)="closeModal()">
-        <ion-icon name="arrow-back" color="primary"></ion-icon>
+        <ion-icon name="arrow-back" mode="ios"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Property Details</ion-title>
@@ -516,6 +516,6 @@
     </ion-fab-list>
   </ion-fab>
 
-  <ion-datetime placeholder="Select Date" id="booking-date" style="display: none;" (ionChange)="closeModal( true )">
+  <ion-datetime placeholder="Select Date" id="booking-date" style="display: none;" (ionChange)="globals.toggleBlur(); closeModal( true )">
   </ion-datetime>
 </ion-content>

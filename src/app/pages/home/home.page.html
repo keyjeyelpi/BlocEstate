@@ -85,27 +85,30 @@
         </ion-card-subtitle>
 
         <ion-buttons class="bumble-card-buttons">
+
           <ion-button mode="ios" class="bumble-card-button bumble-card-button-pass" fill="solid" shape="round"
             color="white" size="large" (click)="dislikeProperty( currentProperty.id )"
             [disabled]="( globals.isBlur() == true )">
             <ion-icon slot="icon-only" name="close" color="danger" style="height: 50px; width: 50px;"></ion-icon>
           </ion-button>
+
           <ion-button mode="ios" class="bumble-card-button bumble-card-button-heart" fill="solid" shape="round"
             color="white" size="large" (click)="loveProperty( currentProperty.id )"
             [disabled]="( globals.isBlur() == true )">
             <ion-icon slot="icon-only" color="gradient" class="custom-icon-saved" style="height: 50px; width: 50px;">
             </ion-icon>
           </ion-button>
+
           <ion-button mode="ios" class="bumble-card-button bumble-card-button-check" fill="solid" shape="round"
             color="white" size="large" (click)="likeProperty( currentProperty.id )"
             [disabled]="( globals.isBlur() == true )">
             <ion-icon slot="icon-only" name="checkmark" color="success" style="height: 50px; width: 50px;"></ion-icon>
           </ion-button>
         </ion-buttons>
+
       </ion-card-content>
 
     </ion-card>
   </div>
-
 
 </ion-content>

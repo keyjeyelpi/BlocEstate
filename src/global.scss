@@ -32,16 +32,37 @@
     src: url( './assets/fonts/SF-Pro-Display-Black.otf' );
 }
 
-* {
-    font-family: sf-pro-display;
+@font-face {
+    font-family: 'open-sans';
+    src: url( './assets/fonts/OpenSans-Regular.ttf' );
 }
 
-ion-title {
-    font-family: sf-pro-display-black;
+@font-face {
+    font-family: 'open-sans-bold';
+    src: url( './assets/fonts/OpenSans-Bold.ttf' );
+}
+
+@font-face {
+    font-family: 'open-sans-light';
+    src: url( './assets/fonts/OpenSans-Light.ttf' );
+}
+
+@font-face {
+    font-family: 'open-sans-black';
+    src: url( './assets/fonts/OpenSans-ExtraBold.ttf' );
+}
+
+* {
+    font-family: open-sans-light;
+}
+
+ion-title, ion-card-title {
+    font-family: open-sans-bold;
+    font-size: 20sp;
 }
 
 .ion-text-bold {
-    font-family: sf-pro-display-bold;
+    font-family: open-sans-bold;
 }
 
 .primary-gradient {

@@ -22,16 +22,36 @@ ion-icon {
       mask-image: url(/assets/icon/profile.svg);
    }
 
+   &[class*="custom-icon-chat-support"] {
+      mask-image: url(/assets/icon/chat-support.svg);
+   }  
+
+   &[class*="custom-icon-settings"] {
+      mask-image: url(/assets/icon/settings.svg);
+   }
+
+   &[class*="custom-icon-location"] {
+      mask-image: url(/assets/icon/location.svg);
+   }
+
+   &[class*="custom-icon-house"] {
+      mask-image: url(/assets/icon/filter/house.svg);
+   }  
+
+   &[class*="custom-icon-condominium"] {
+      mask-image: url(/assets/icon/filter/condominium.svg);
+   }
+
+   &[class*="custom-icon-apartment"] {
+      mask-image: url(/assets/icon/filter/apartment.svg);
+   }  
+
    &[class*="custom-icon-buyer"] {
       mask-image: url(/assets/icon/buyer.svg);
    }
 
    &[class*="custom-icon-seller"] {
       mask-image: url(/assets/icon/seller.svg);
-   }  
-
-   &[class*="custom-icon-chat-support"] {
-      mask-image: url(/assets/icon/chat-support.svg);
    }  
 
    &[class*="custom-icon-cake"] {
