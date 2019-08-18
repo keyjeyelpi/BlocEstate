@@ -50,28 +50,28 @@ export class FavoritesPage implements OnInit {
   ngOnInit() {
   }
 
-  animateCard(id) {
+  animateCard( id ) {
     let animation: string = `slideUp`
 
-    $('#' + id).addClass('magictime');
-    $('#' + id).addClass(animation);
+    $( '#' + id ).addClass('magictime');
+    $( '#' + id ).addClass(animation);
 
     setTimeout(() => {
-      $('#' + id).removeClass(animation);
+      $( '#' + id ).removeClass(animation);
     }, 750);
   }
 
-  async showPropertyDetails(propertyDetails) {
-    this.animateCard(propertyDetails.id)
+  async showPropertyDetails( propertyDetails ) {
+    this.animateCard( propertyDetails.id )
 
     const modal = await this.modalController.create({
       component: PropertyDetailsPage,
       componentProps: {
-        details: propertyDetails
+        details : propertyDetails
       }
     });
 
-    setTimeout(() => {
+    setTimeout(() => {      
       return modal.present();
     }, 750);
   }

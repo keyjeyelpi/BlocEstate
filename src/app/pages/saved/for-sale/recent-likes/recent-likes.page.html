@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content color="light" class="ion-padding">
-  <ion-card id="{{ property.id }}" class="ion-margin-top" *ngFor="let property of properties" (click)="showPropertyDetails( property )">
+  <ion-card id="{{ property.id }}" mode="md" class="ion-margin-top" *ngFor="let property of properties" (click)="showPropertyDetails( property )">
 
     <ion-card-header class="img-container" no-padding color="black">
       <img src="{{ property.imageUrl }}" id="property-image-url">
