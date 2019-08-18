@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'saved/recent-likes', loadChildren: './pages/saved/for-sale/recent-likes/recent-likes.module#RecentLikesPageModule' },
   { path: 'saved/favorites', loadChildren: './pages/saved/for-sale/favorites/favorites.module#FavoritesPageModule' },
   { path: 'property-details', loadChildren: './pages/property-details/property-details.module#PropertyDetailsPageModule' },
-  { path: 'kyc', loadChildren: './pages/kyc/kyc.module#KycPageModule' }
+  { path: 'kyc', loadChildren: './pages/kyc/kyc.module#KycPageModule' },
+  { path: 'step-six', loadChildren: './pages/contract/step-six/step-six.module#StepSixPageModule' }
 
 
   // { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
