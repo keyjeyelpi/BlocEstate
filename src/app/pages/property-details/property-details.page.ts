@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class PropertyDetailsPage implements OnInit {
 
   public propertyDetails: any
+  public showFab: boolean
 
   constructor(
     public modalController: ModalController,
@@ -22,6 +23,8 @@ export class PropertyDetailsPage implements OnInit {
     this.httpClient.get("/assets/files/property.details.json").subscribe((data) => {
       this.propertyDetails = data
     })
+
+    this.showFab = this.navParams.data.showFab
   }
 
   ngOnInit() {

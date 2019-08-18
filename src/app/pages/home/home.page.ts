@@ -169,7 +169,8 @@ export class HomePage {
     const modal = await this.modalController.create({
       component: PropertyDetailsPage,
       componentProps: {
-        id: detailsOfProperty.id
+        id: detailsOfProperty.id,
+        showFab: true
       }
     });
 

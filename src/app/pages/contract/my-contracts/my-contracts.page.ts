@@ -157,7 +157,8 @@ export class MyContractsPage implements OnInit {
     const modal = await this.modalController.create({
       component: StepOnePage,
       componentProps: {
-        id: contract_information.id
+        id: contract_information.id,
+        showFab: false
       }
     })
 

@@ -494,7 +494,7 @@
   </ion-grid>
   </div>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="showFab === true">
     <ion-fab-button color="gradient" (click)="globals.toggleBlur()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
