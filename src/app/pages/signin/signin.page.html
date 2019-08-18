@@ -49,7 +49,8 @@
     <ion-row>
       <ion-col>
         <ion-item lines="none" color="light">
-          <ion-input type="password" placeholder="Password"></ion-input>
+            <ion-input [type]="passwordType" placeholder="Password"></ion-input>
+            <ion-icon [name]="passwordEye" color="primary" item-end (click)="togglePassword()"></ion-icon>
         </ion-item>
       </ion-col>
     </ion-row>

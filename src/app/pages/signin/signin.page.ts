@@ -9,6 +9,10 @@ import { SignupPage } from '../signup/signup.page';
 })
 export class SigninPage implements OnInit {
 
+  passwordType: string = 'password'
+  passwordShown: boolean = false
+  passwordEye: string = 'eye-off'
+
   constructor(
     public modalController: ModalController
   ) { }
@@ -16,7 +20,17 @@ export class SigninPage implements OnInit {
   ngOnInit() {
   }
 
-
+  togglePassword() {
+    if( this.passwordShown ) {
+      this.passwordShown = false
+      this.passwordType = 'password'
+      this.passwordEye = 'eye-off'
+    } else {
+      this.passwordShown = true
+      this.passwordType = 'text'
+      this.passwordEye = 'eye'
+    }
+  }
 
   closeModal() {
     this.modalController.dismiss();
