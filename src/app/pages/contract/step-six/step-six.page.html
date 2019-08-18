@@ -1,9 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>step-six</ion-title>
-  </ion-toolbar>
+<ion-header no-border>
+    <ion-toolbar mode="ios">
+        <ion-title>Step 6. Taking Photos</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor="let photo of photos">
+    <img src="{{photo}}">
+  </ion-card>
 
+  <ion-button (click)="takePhotos()" expand="full" color="gradient"> Take Photos</ion-button>
 </ion-content>

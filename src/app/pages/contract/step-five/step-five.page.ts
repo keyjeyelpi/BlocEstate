@@ -4,6 +4,7 @@ import { Globals } from 'src/app/classes/globals';
 import { StepTwoPage } from '../step-two/step-two.page';
 import { StepThreePage } from '../step-three/step-three.page';
 import { StepFourPage } from '../step-four/step-four.page';
+import { StepSixPage } from '../step-six/step-six.page';
 
 @Component({
   selector: 'app-step-five',
@@ -22,7 +23,7 @@ export class StepFivePage implements OnInit {
   });
   }
 
-  async goBack( pageNumber ) {
+  async goTO( pageNumber ) {
 
     var page
 
@@ -32,6 +33,8 @@ export class StepFivePage implements OnInit {
       page = StepThreePage
     } else if( pageNumber == 4) {
       page = StepFourPage
+    } else if( pageNumber == 6) {
+      page = StepSixPage
     }
 
     this.closeModal();

@@ -6,7 +6,7 @@
 
 <ion-content color="light">
 
-    <ion-card color="white" class="ion-padding" (click)="goBack( 2 )">
+    <ion-card color="white" class="ion-padding" (click)="goTo( 2 )">
         <ion-grid>
             <ion-row>
                 <ion-text color="primary" class="ion-title ion-text-bold">
@@ -40,7 +40,7 @@
             </ion-row>
         </ion-grid>
     </ion-card>
-    <ion-card color="white" class="ion-padding" (click)="goBack( 3 )">
+    <ion-card color="white" class="ion-padding" (click)="goTo( 3 )">
         <ion-grid>
             <ion-row>
                 <ion-text color="primary" class="ion-title ion-text-bold">
@@ -84,7 +84,7 @@
             </ion-row>
         </ion-grid>
     </ion-card>
-    <ion-card color="white" class="ion-padding" (click)="goBack( 4 )">
+    <ion-card color="white" class="ion-padding" (click)="goTo( 4 )">
         <ion-grid>
             <ion-row>
                 <ion-text color="primary" class="ion-title ion-text-bold">
@@ -109,7 +109,7 @@
         </ion-grid>
     </ion-card>
 
-    <ion-button expand="block" color="gradient" class="ion-margin" (click)="closeModal()">
+    <ion-button expand="block" color="gradient" class="ion-margin" (click)="goTo( 6 )">
         Confirm
     </ion-button>
 

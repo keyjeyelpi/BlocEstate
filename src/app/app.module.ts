@@ -26,16 +26,20 @@ import { StepTwoPageModule } from './pages/contract/step-two/step-two.module';
 import { StepThreePageModule } from './pages/contract/step-three/step-three.module';
 import { StepFourPageModule } from './pages/contract/step-four/step-four.module';
 import { StepFivePageModule } from './pages/contract/step-five/step-five.module';
+import { StepSixPageModule } from './pages/contract/step-six/step-six.module';
 import { PopoverComponent } from './pages/contract/popover/popover.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
+import { Camera } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
-  declarations: [AppComponent , PopoverComponent],
-  entryComponents: [ PopoverComponent ],
+  declarations: [AppComponent, PopoverComponent],
+  entryComponents: [PopoverComponent],
   imports: [
-    BrowserModule, 
-    IonicModule.forRoot(), 
+    BrowserModule,
+    IonicModule.forRoot(),
     HttpClientModule,
     AppRoutingModule,
     EditProfilePageModule,
@@ -49,6 +53,7 @@ import {HttpClientModule} from '@angular/common/http';
     StepThreePageModule,
     StepFourPageModule,
     StepFivePageModule,
+    StepSixPageModule,
     SignupPageModule,
     SigninPageModule
   ],
@@ -56,8 +61,10 @@ import {HttpClientModule} from '@angular/common/http';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Globals
+    Globals,
+    Camera,
+    File
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
