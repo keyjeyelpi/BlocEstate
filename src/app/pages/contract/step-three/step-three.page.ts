@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, NavParams } from '@ionic/angular';
+import { Globals } from 'src/app/classes/globals';
 import { StepFourPage } from '../step-four/step-four.page';
 
 @Component({
@@ -9,7 +10,7 @@ import { StepFourPage } from '../step-four/step-four.page';
 })
 export class StepThreePage implements OnInit {
 
-  constructor(public modalController : ModalController, public navParams : NavParams) { }
+  constructor(public modalController : ModalController, public navParams : NavParams, public globals : Globals) { }
 
   async closeModal() {
     this.modalController.dismiss();

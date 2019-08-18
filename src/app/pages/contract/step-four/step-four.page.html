@@ -15,18 +15,18 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col size="11">
-            <ion-datetime placeholder="Select Date">
-            </ion-datetime>
-          </ion-col>
-          <ion-col size="1" class="vertical-center">
-            <ion-icon name="calendar" item-right></ion-icon>
-          </ion-col>
-        </ion-row>
+            <ion-col size="11">
+                <ion-datetime [(ngModel)]="globals.contractInfo.stepFour.desired_possession_date" placeholder="Select Date">
+                  </ion-datetime>
+              </ion-col>
+              <ion-col size="1" class="vertical-center">
+                <ion-icon name="calendar"></ion-icon>
+              </ion-col>
+            </ion-row>
       </ion-grid>
     </ion-card>
   
-    <ion-card class="ion-padding" color="white">
+    <ion-card color="white">
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -68,7 +68,7 @@
       </ion-grid>
     </ion-card>
   
-    <ion-card class="ion-padding" color="white">
+    <ion-card color="white">
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -88,11 +88,11 @@
         </ion-row>
       </ion-grid>
   
-      <ion-textarea autoGrow="true" placeholder="Input Seller Assumed Closing Costs here..."></ion-textarea>
+      <ion-textarea class="ion-padding-horizontal" [(ngModel)]="globals.contractInfo.stepFour.seller_assumed_closing_costs" autoGrow="true" placeholder="Input Seller Assumed Closing Costs here..."></ion-textarea>
     </ion-card>
   
-    <ion-button expand="block" color="gradient" class="ion-margin" (click)="closeModal()">
-      Finalize
+    <ion-button expand="block" color="gradient" class="ion-margin" (click)="nextStep()">
+      Submit
     </ion-button>
   
   </ion-content>

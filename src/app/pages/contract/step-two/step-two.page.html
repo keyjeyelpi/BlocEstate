@@ -20,7 +20,7 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    <ion-textarea autoGrow="true" placeholder="Input Fixtures data here..."></ion-textarea>
+    <ion-textarea [(ngModel)]="globals.contractInfo.stepTwo.fixtures" autoGrow="true" placeholder="Input Fixtures data here..."></ion-textarea>
   </ion-card>
 
   <ion-card class="ion-padding" color="white">
@@ -38,7 +38,7 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    <ion-textarea autoGrow="true" placeholder="Input Chatels data here..."></ion-textarea>
+    <ion-textarea [(ngModel)]="globals.contractInfo.stepTwo.chatels" autoGrow="true" placeholder="Input Chatels data here..."></ion-textarea>
   </ion-card>
 
   <ion-card class="ion-padding" color="white">
@@ -56,7 +56,7 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    <ion-textarea autoGrow="true" placeholder="Input Rentals data here..."></ion-textarea>
+    <ion-textarea [(ngModel)]="globals.contractInfo.stepTwo.rentals" autoGrow="true" placeholder="Input Rentals data here..."></ion-textarea>
   </ion-card>
 
   <ion-button expand="block" color="gradient" class="ion-margin" (click)="nextStep()">
