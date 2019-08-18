@@ -185,7 +185,7 @@ ion-content ion-button {
 
 // CLASSES
 .blur {
-  filter: grayscale(0.6) blur(5px);
+  filter: grayscale(0.6) blur(5px) brightness(50%);
   -webkit-filter: grayscale(0.6) blur(5px);
   transition: -webkit-filter 200ms linear;
 }

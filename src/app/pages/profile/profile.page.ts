@@ -9,6 +9,44 @@ import { EditProfilePage } from './edit-profile/edit-profile.page';
 } )
 export class ProfilePage implements OnInit {
 
+  items : any = [
+    {
+      "name": "Notifications",
+      "icon": "custom-icon-menu-notifications",
+      "routerLink": ""
+    },
+    {
+      "name": "Payment",
+      "icon": "custom-icon-menu-payment",
+      "routerLink": ""
+    },
+    {
+      "name": "Contract Agreements",
+      "icon": "custom-icon-menu-contract-agreements",
+      "routerLink": ""
+    },
+    {
+      "name": "Terms and Conditions",
+      "icon": "custom-icon-menu-terms-and-conditions",
+      "routerLink": ""
+    },
+    {
+      "name": "Privacy Policy",
+      "icon": "custom-icon-menu-privacy-policy",
+      "routerLink": ""
+    },
+    {
+      "name": "About Us",
+      "icon": "custom-icon-menu-about-us",
+      "routerLink": ""
+    },
+    {
+      "name": "Log Out",
+      "icon": "custom-icon-menu-logout",
+      "routerLink": ""
+    }
+  ]
+
   constructor(
     public modalController: ModalController
   ) { }
