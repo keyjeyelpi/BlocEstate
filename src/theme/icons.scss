@@ -30,6 +30,34 @@ ion-icon {
       mask-image: url(/assets/icon/settings.svg);
    }
 
+   &[class*="custom-icon-menu-notifications"] {
+      mask-image: url(/assets/icon/menu/notifications.svg);
+   }
+
+   &[class*="custom-icon-menu-payment"] {
+      mask-image: url(/assets/icon/menu/payment.svg);
+   }
+
+   &[class*="custom-icon-menu-contract-agreements"] {
+      mask-image: url(/assets/icon/menu/contract-agreements.svg);
+   }
+
+   &[class*="custom-icon-menu-privacy-policy"] {
+      mask-image: url(/assets/icon/menu/privacy-policy.svg);
+   }
+
+   &[class*="custom-icon-menu-terms-and-conditions"] {
+      mask-image: url(/assets/icon/menu/terms-and-conditions.svg);
+   }
+
+   &[class*="custom-icon-menu-about-us"] {
+      mask-image: url(/assets/icon/menu/about-us.svg);
+   }
+
+   &[class*="custom-icon-menu-logout"] {
+      mask-image: url(/assets/icon/menu/logout.svg);
+   }
+
    &[class*="custom-icon-location"] {
       mask-image: url(/assets/icon/location.svg);
    }

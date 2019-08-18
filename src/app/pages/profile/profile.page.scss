@@ -1,6 +1,24 @@
+$size: 20px;
+
 ion-row {
     border-top: solid 1px rgb( 242, 242, 242);
     border-bottom: solid 1px rgb( 242, 242, 242);
+
+    ion-col {
+        height: $size;
+        padding: 0px;
+        line-height: $size;
+
+        ion-text {
+            font-size: 15px;
+            vertical-align: middle;
+        }
+
+        ion-icon {
+            height: $size;
+            width: $size;
+        }
+    }
 }
 
 ion-row:first-of-type {
