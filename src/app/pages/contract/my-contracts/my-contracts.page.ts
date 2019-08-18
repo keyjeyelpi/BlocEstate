@@ -232,7 +232,7 @@ export class MyContractsPage implements OnInit {
 
     if (this.segmentType == 'approved') {
 
-      user.archived.push(user.approved.filter(card => (card || {}).id === id)[0])
+      user.paid.push(user.approved.filter(card => (card || {}).id === id)[0])
       user.approved = user.approved.filter(card => (card || {}).id !== id)
 
     } else if (this.segmentType == 'pending') {
