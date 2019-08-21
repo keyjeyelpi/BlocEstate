@@ -86,6 +86,10 @@ a {
 ion-card {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
+    ion-card-header {
+        overflow: hidden;
+    }
+
     ion-card-header.img-container img {
         animation-timing-function: linear;
     }
@@ -93,8 +97,16 @@ ion-card {
 
 *[mode="md"] ion-card {
     border-radius: 8px !important;
+
+    ion-card-header {
+        border-radius: 8px !important;
+    }
 }
 
 *[mode="ios"] ion-card {
     border-radius: 16px !important;
+
+    ion-card-header {
+        border-radius: 16px !important;
+    }
 }
