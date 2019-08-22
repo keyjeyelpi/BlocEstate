@@ -500,7 +500,7 @@
     </ion-fab-button>
 
     <ion-fab-list inline-block side="top">
-      <ion-button block routerLink="/kyc" (click)="closeModal()" color="danger">
+      <ion-button block routerLink="/kyc" (click)="globals.toggleBlur(); closeModal()" color="danger">
         <div>
           <ion-icon name="cash" color="white"></ion-icon>
           <ion-label color="white">Buy Now</ion-label>

@@ -33,8 +33,6 @@ export class StepFivePage implements OnInit {
       page = StepThreePage
     } else if( pageNumber == 4) {
       page = StepFourPage
-    } else if( pageNumber == 6) {
-      page = StepSixPage
     }
 
     this.closeModal();

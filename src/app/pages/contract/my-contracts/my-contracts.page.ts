@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController, PopoverController } from '@ionic/angular';
 import { PropertyDetailsPage } from '../../property-details/property-details.page';
 import { StepOnePage } from '../step-one/step-one.page';
@@ -12,7 +13,7 @@ import * as $ from 'jquery';
 })
 export class MyContractsPage implements OnInit {
 
-  constructor(public modalController: ModalController, public popoverController: PopoverController) { }
+  constructor(public modalController: ModalController, public popoverController: PopoverController, public router: Router) { }
 
   public userType: any = 'buyer'
   public segmentType: any = 'pending'
@@ -197,7 +198,7 @@ export class MyContractsPage implements OnInit {
     } else if (this.segmentType == 'pending') {
       this.showInfo(contractInfo)
     } else if (this.segmentType == 'paid') {
-      this.showInfo(contractInfo)
+      this.router.navigate(['/contract/mode-of-payment'])
     }
   }
 
