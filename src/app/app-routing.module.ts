@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'saved/favorites', loadChildren: './pages/saved/for-sale/favorites/favorites.module#FavoritesPageModule' },
   { path: 'property-details', loadChildren: './pages/property-details/property-details.module#PropertyDetailsPageModule' },
   { path: 'kyc', loadChildren: './pages/kyc/kyc.module#KycPageModule' },
-  { path: 'step-six', loadChildren: './pages/contract/step-six/step-six.module#StepSixPageModule' }
+  { path: 'step-six', loadChildren: './pages/contract/step-six/step-six.module#StepSixPageModule' },
+  { path: 'mode-of-payment', loadChildren: './pages/contract/mode-of-payment/mode-of-payment.module#ModeOfPaymentPageModule' }
 
 
   // { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
