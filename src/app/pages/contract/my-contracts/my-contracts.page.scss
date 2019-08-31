@@ -26,6 +26,14 @@ ion-tabs {
                 position: absolute;
                 bottom: 0px !important;
 
+                ion-card-title {
+                    font-size: 1.25em;
+                }
+                
+                ion-card-subtitle {
+                    font-size: 0.5em;
+                }
+
                 * {
                     z-index: 1;
                 }
