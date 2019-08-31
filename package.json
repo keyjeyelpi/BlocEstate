@@ -30,6 +30,8 @@
     "ionic-swipe-all": "^2.0.0",
     "jquery": "^3.4.1",
     "magic.css": "^1.4.1",
+    "ng2-fittext": "^1.2.6",
+    "ng4-fittext": "^1.2.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.29"

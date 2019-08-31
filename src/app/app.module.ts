@@ -17,6 +17,7 @@ import { RecentLikesPageModule } from './pages/saved/for-sale/recent-likes/recen
 import { FavoritesPageModule } from './pages/saved/for-sale/favorites/favorites.module';
 
 import { Globals } from './classes/globals';
+import { Ng2FittextModule } from 'ng2-fittext';
 import { SignupPageModule } from './pages/signup/signup.module';
 import { SigninPageModule } from './pages/signin/signin.module';
 
@@ -39,6 +40,7 @@ import { File } from '@ionic-native/file/ngx';
   entryComponents: [PopoverComponent],
   imports: [
     BrowserModule,
+    Ng2FittextModule,
     IonicModule.forRoot(),
     HttpClientModule,
     AppRoutingModule,

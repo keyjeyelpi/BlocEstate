@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SignupPage } from '../../signup/signup.page';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-edit-filter',
@@ -17,9 +18,9 @@ export class EditFilterPage implements OnInit {
   currentMin: number;
   currentMax: number;
   buildings: any = [
-    {"type": "house"},
-    {"type": "condominium"},
-    {"type": "apartment"}
+    {"type": "house", "icon": "house"},
+    {"type": "condo", "icon": "condominium"},
+    {"type": "apartment", "icon": "apartment"}
   ]
 
   constructor(
@@ -30,9 +31,8 @@ export class EditFilterPage implements OnInit {
   }
 
   ngOnInit() {
+    $('ion-card.ion-type ion-text').append( 'hi' );
   }
-
-
 
   closeModal() {
     this.modalController.dismiss();
