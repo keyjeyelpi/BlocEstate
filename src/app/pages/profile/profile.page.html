@@ -21,49 +21,62 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card color="white">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-text class="ion-text-bold" color="primary">
-            MY LISTS
-          </ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-padding" routerLink="/contract/view-schedule">
-        <ion-col size="12">
-          <ion-text>
-            Viewing Schedule
-          </ion-text>
-          <ion-icon float-right color="primary" name="calendar"></ion-icon>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-padding" routerLink="/contract/my-contracts">
-        <ion-col size="12">
-          <ion-text>
-            My Contracts
-          </ion-text>
-          <ion-icon float-right color="primary" name="today"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
-
-  <ion-card color="white">
-    <ion-grid class="no-padding">
-      <ion-row *ngFor="let item of items" class="ion-padding">
-        <ion-col size="12" routerLink="{{ item.routerLink }}">
-          <ion-text>
-            {{ item.name }}
-          </ion-text>
-          <ion-icon float-right color="primary" class="{{ item.icon }}"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
-
   <ion-grid>
-    <ion-row>
+    <ion-row class="ion-padding-horizontal">
+      <ion-text class="ion-text-bold">
+        My List
+      </ion-text>
+    </ion-row>
+
+    <ion-row no-margin>
+      <ion-col size="6">
+        <ion-card color="white" routerLink="/contract/view-schedule">
+          <ion-card-header>
+            <ion-icon float-left color="primary" name="calendar"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text class="ion-text-bold">
+              Viewing Schedule
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card color="white" routerLink="/contract/my-contracts">
+          <ion-card-header>
+            <ion-icon float-left color="primary" name="today"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text class="ion-text-bold">
+              My Contracts
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding-horizontal ion-padding-top">
+      <ion-text class="ion-text-bold">
+        Settings
+      </ion-text>
+    </ion-row>
+
+    <ion-row no-margin>
+      <ion-col size="6" *ngFor="let item of items">
+        <ion-card color="white" routerLink="{{ item.routerLink }}">
+          <ion-card-header>
+            <ion-icon float-left color="primary" class="{{ item.icon }}"></ion-icon>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text class="ion-text-bold">
+              {{ item.name }}
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding">
       <ion-col class="ion-text-center">
         <ion-label color="primary">
           BlocEstate
