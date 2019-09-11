@@ -80,6 +80,7 @@ export class HomePage {
 
     popover.onDidDismiss()
       .then((result) => {
+        this.globals.toggleBlur();
       });
 
     return await popover.present()

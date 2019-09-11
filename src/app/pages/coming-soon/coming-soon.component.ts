@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PopoverController, NavParams } from '@ionic/angular';
 
 @Component({
   selector: 'app-coming-soon',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComingSoonComponent implements OnInit {
 
-  constructor() { }
+  constructor( public popoverController : PopoverController, public navParams : NavParams ) { }
 
   ngOnInit() {}
+
+  removeComingSoon() {
+    this.popoverController.dismiss();
+  }
 
 }
