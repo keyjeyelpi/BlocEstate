@@ -29,6 +29,7 @@ import { StepFourPageModule } from './pages/contract/step-four/step-four.module'
 import { StepFivePageModule } from './pages/contract/step-five/step-five.module';
 import { StepSixPageModule } from './pages/contract/step-six/step-six.module';
 import { PopoverComponent } from './pages/contract/popover/popover.component';
+import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -36,8 +37,8 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
-  declarations: [AppComponent, PopoverComponent],
-  entryComponents: [PopoverComponent],
+  declarations: [AppComponent, PopoverComponent, ComingSoonComponent],
+  entryComponents: [PopoverComponent, ComingSoonComponent],
   imports: [
     BrowserModule,
     Ng2FittextModule,
