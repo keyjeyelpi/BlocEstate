@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: 'property-details', loadChildren: './pages/property-details/property-details.module#PropertyDetailsPageModule' },
   { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule' },
   { path: 'signin', loadChildren: './pages/signin/signin.module#SigninPageModule' },
-  { path: 'kyc', loadChildren: './pages/kyc/kyc.module#KycPageModule' }
+  { path: 'kyc', loadChildren: './pages/kyc/kyc.module#KycPageModule' },
+  { path: 'about-developers', loadChildren: './pages/profile/about-developers/about-developers.module#AboutDevelopersPageModule' }
 
 
   // { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },

@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ModalController, PopoverController } from '@ionic/angular';
+
 import * as $ from 'jquery';
 import { Globals } from 'src/app/classes/globals';
-import { ModalController } from '@ionic/angular';
 
 import { EditFilterPage } from './edit-filter/edit-filter.page';
 import { SignupPage } from '../signup/signup.page';
 import { PropertyDetailsPage } from '../property-details/property-details.page';
+
+import { ComingSoonComponent } from '../coming-soon/coming-soon.component';
 
 @Component({
   selector: 'app-home',
@@ -52,14 +56,16 @@ export class HomePage {
 
   constructor(
     public modalController: ModalController,
-    public globals: Globals
+    public globals: Globals,
+    public popoverController: PopoverController,
+    public router: Router
   ) {
     this.setCurrentProperty();
   }
 
   setCurrentProperty() {
     this.propertyLength = this.properties.length;
-    if(this.propertyLength != 0) {
+    if (this.propertyLength != 0) {
       this.currentProperty = this.properties[this.propertyIdx];
     } else {
       this.currentProperty = null;
@@ -67,33 +73,45 @@ export class HomePage {
     }
   }
 
-  removeCard( id ) {
+  async comingSoon(id) {
+    const popover = await this.popoverController.create({
+      component: ComingSoonComponent
+    })
+
+    popover.onDidDismiss()
+      .then((result) => {
+      });
+
+    return await popover.present()
+  }
+
+  removeCard(id) {
     this.propertyLength = this.properties.length;
     setTimeout(() => {
-      this.properties = this.properties.filter( card => ( card || { } ).id !== id )
-      if(this.propertyIdx > 0) {
+      this.properties = this.properties.filter(card => (card || {}).id !== id)
+      if (this.propertyIdx > 0) {
         this.propertyIdx--;
       }
       this.setCurrentProperty();
     }, 750);
   }
 
-  likeProperty( id ) {
+  likeProperty(id) {
     this.animateCard(`like`);
 
-    this.removeCard( id );
+    this.removeCard(id);
   }
 
-  dislikeProperty( id ) {
-    this.animateCard(`dislike`);    
+  dislikeProperty(id) {
+    this.animateCard(`dislike`);
 
-    this.removeCard( id );
+    this.removeCard(id);
   }
 
-  loveProperty( id ) {
+  loveProperty(id) {
     this.animateCard(`love`);
 
-    this.removeCard( id );
+    this.removeCard(id);
   }
 
   previousProperty() {
@@ -175,15 +193,15 @@ export class HomePage {
     });
 
     modal.onDidDismiss()
-    .then(( result ) => {
-      if( result.data.componentProps.confirmation == true ) {
-        this.loveProperty( result.data.componentProps.id );        
-      }
-    });
+      .then((result) => {
+        if (result.data.componentProps.confirmation == true) {
+          this.loveProperty(result.data.componentProps.id);
+        }
+      });
 
-    setTimeout(() => {      
+    setTimeout(() => {
       return modal.present();
-      }, 750);
+    }, 750);
 
   }
 
