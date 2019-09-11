@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>About Developers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-vertical" color="light">
+  <ion-text id="title" class="ion-padding">
+    Team
+  </ion-text>
+
+  <ion-card *ngFor="let member of members" color="white" class="ion-text-center" routerLink="{{member.linkedin}}">
+    <ion-card-header>
+      <ion-item lines="none">
+        <ion-avatar style="height: 100px; width: 100px; margin: auto;">
+            <img style="height: 100%; width: 100%;" src="assets/imgs/developers/{{member.image}}">
+        </ion-avatar>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>
+        {{member.name}}
+      </ion-card-title>
+      <ion-card-subtitle>
+        {{member.position}}
+      </ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
