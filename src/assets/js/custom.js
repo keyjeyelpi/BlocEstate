@@ -1,3 +1,0 @@
-function hialert() {
-    alert( "Hi" );
-}

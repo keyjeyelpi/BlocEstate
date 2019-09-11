@@ -38,7 +38,7 @@ export class ProfilePage implements OnInit {
     {
       "name": "About Us",
       "icon": "custom-icon-menu-about-us",
-      "routerLink": ""
+      "routerLink": "/about-developers"
     },
     {
       "name": "Log Out",
