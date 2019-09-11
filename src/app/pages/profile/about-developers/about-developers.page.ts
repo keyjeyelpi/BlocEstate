@@ -48,7 +48,6 @@ export class AboutDevelopersPage implements OnInit {
 
   constructor() { }
 
-}
-    ngOnInit() {
+  ngOnInit() { }
 
 }
