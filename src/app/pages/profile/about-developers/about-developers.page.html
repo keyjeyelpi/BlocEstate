@@ -1,6 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>About Developers</ion-title>
+<ion-header no-border>
+    <ion-toolbar mode="ios">
+      <ion-buttons slot="secondary">
+        <ion-button fill="clear" shape="round" routerLink="/tabs/profile">
+          <ion-icon name="arrow-back" color="primary"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+       <ion-title>About Developers</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,7 +14,7 @@
     Team
   </ion-text>
 
-  <ion-card *ngFor="let member of members" color="white" class="ion-text-center" routerLink="{{member.linkedin}}">
+  <ion-card *ngFor="let member of members" color="white" class="ion-text-center" href="{{member.linkedin}}">
     <ion-card-header>
       <ion-item lines="none">
         <ion-avatar style="height: 100px; width: 100px; margin: auto;">
