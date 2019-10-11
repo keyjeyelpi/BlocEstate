@@ -1,5 +1,5 @@
 $colors: (
-  primary: #4285F4,
+  primary: #0084FF,
   secondary: #837e7e,
   tertiary: #8190a5,
   success: #77b693,
@@ -98,14 +98,14 @@ $colors: (
   // COLORS
   
   /** gradient **/
-  --ion-color-gradient: linear-gradient(to right, #4AA8E4, #0F62C7);
+  --ion-color-gradient: linear-gradient(45deg, #00c6ff, #0084FF);
   --ion-color-gradient-rgb: 56, 128, 255;
   --ion-color-gradient-contrast: #ffffff;
   --ion-color-gradient-contrast-rgb: 255, 255, 255;
   --ion-color-gradient-shade: #3da5be;
   --ion-color-gradient-tint: #58c2dc;
 
-  --ion-color-gradient2: linear-gradient(to right, #0F62C7, #4AA8E4);
+  --ion-color-gradient2: linear-gradient(-45deg, #0084FF, #00c6ff);
   --ion-color-gradient2-rgb: 64, 186, 209;
   --ion-color-gradient2-contrast: #ffffff;
   --ion-color-gradient2-contrast-rgb: 0, 0, 0;

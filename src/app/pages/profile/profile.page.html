@@ -8,20 +8,18 @@
 
 <ion-content class="ion-padding-vertical" color="light">
 
-  <ion-card class="no-padding ion-margin-vertical" color="gradient" (click)="editProfile()">
+  <ion-card class="ion-padding ion-margin-vertical" color="gradient" (click)="editProfile()">
     <ion-card-content>
-      <ion-item lines="none" class="no-padding" color="gradient">
-        <ion-text slot="start" class="ion-text-bold">
-          Hello KJ
-        </ion-text>
-        <ion-avatar slot="end">
-          <img src="assets/imgs/etc/dummy-profile-image.png">
-        </ion-avatar>
-      </ion-item>
+      <ion-text float-left class="ion-text-bold" style="font-size: 25px;">
+        Hello KJ
+      </ion-text>
+      <ion-avatar float-right style="top: -4px; position: relative;">
+        <img src="assets/imgs/etc/dummy-profile-image.png">
+      </ion-avatar>
     </ion-card-content>
   </ion-card>
 
-  <ion-grid>
+  <ion-grid class="items">
     <ion-row class="ion-padding-horizontal">
       <ion-text class="ion-text-bold">
         My List

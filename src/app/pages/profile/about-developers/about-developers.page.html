@@ -1,11 +1,11 @@
 <ion-header no-border>
-    <ion-toolbar mode="ios">
-      <ion-buttons slot="secondary">
-        <ion-button fill="clear" shape="round" routerLink="/tabs/profile">
-          <ion-icon name="arrow-back" color="primary"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-       <ion-title>About Developers</ion-title>
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="secondary">
+      <ion-button fill="clear" shape="round" routerLink="/tabs/profile">
+        <ion-icon name="arrow-back" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>About Developers</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,22 +14,28 @@
     Team
   </ion-text>
 
-  <ion-card *ngFor="let member of members" color="white" class="ion-text-center" href="{{member.linkedin}}">
-    <ion-card-header>
-      <ion-item lines="none">
-        <ion-avatar style="height: 100px; width: 100px; margin: auto;">
-            <img style="height: 100%; width: 100%;" src="assets/imgs/developers/{{member.image}}">
-        </ion-avatar>
-      </ion-item>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-card-title>
-        {{member.name}}
-      </ion-card-title>
-      <ion-card-subtitle>
-        {{member.position}}
-      </ion-card-subtitle>
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let member of members">
+        <ion-card color="white" class="ion-text-center" href="{{member.linkedin}}">
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-avatar style="height: 50px; width: 50px; margin: auto;">
+                <img style="height: 100%; width: 100%;" src="assets/imgs/developers/{{member.image}}">
+              </ion-avatar>
+            </ion-item>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>
+              {{member.name}}
+            </ion-card-title>
+            <ion-card-subtitle>
+              {{member.position}}
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
