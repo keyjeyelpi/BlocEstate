@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutDevelopersPage implements OnInit {
 
-  members: any = [
+  developers: any = [
     {
       "name": "Rejiel Gonzales",
       "position": "Project Lead",

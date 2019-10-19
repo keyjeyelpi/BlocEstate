@@ -20,32 +20,32 @@ export class HomePage {
 
   properties: any = [
     {
-      id: `1`,
-      imageUrl: `assets/imgs/estate/1.jpg`,
+      id: '1',
+      imageUrl: 'assets/imgs/estate/1.jpg',
       description: {
-        address: `Science City of Muñoz, Nueva Ecija`,
-        price: `$ 500,000`
+        address: 'Science City of Muñoz, Nueva Ecija',
+        price: '$ 500,000'
       }
     }, {
-      id: `2`,
-      imageUrl: `assets/imgs/estate/2.jpg`,
+      id: '2',
+      imageUrl: 'assets/imgs/estate/2.jpg',
       description: {
-        address: `Tarlac City, Tarlac`,
-        price: `$ 750,000`
+        address: 'Tarlac City, Tarlac',
+        price: '$ 750,000'
       }
     }, {
-      id: `3`,
-      imageUrl: `assets/imgs/estate/3.jpg`,
+      id: '3',
+      imageUrl: 'assets/imgs/estate/3.jpg',
       description: {
-        address: `Central Luzon, Nueva Ecija`,
-        price: `$ 850,000`
+        address: 'Central Luzon, Nueva Ecija',
+        price: '$ 850,000'
       }
     }, {
-      id: `4`,
-      imageUrl: `assets/imgs/estate/4.jpg`,
+      id: '4',
+      imageUrl: 'assets/imgs/estate/4.jpg',
       description: {
-        address: `San Antonio, Nueva Ecija`,
-        price: `$ 950,000`
+        address: 'San Antonio, Nueva Ecija',
+        price: '$ 950,000'
       }
     }
   ];
@@ -60,150 +60,97 @@ export class HomePage {
     public popoverController: PopoverController,
     public router: Router
   ) {
-    this.setCurrentProperty();
+    this.setCurrentProperty( );
   }
 
-  setCurrentProperty() {
+  setCurrentProperty( ) {
     this.propertyLength = this.properties.length;
-    if (this.propertyLength != 0) {
-      this.currentProperty = this.properties[this.propertyIdx];
-    } else {
-      this.currentProperty = null;
-      this.propertyIdx = 0;
-    }
+    ( this.propertyLength != 0 ) ? 
+      ( this.currentProperty = this.properties[ this.propertyIdx ] ) : 
+      ( this.currentProperty = null, this.propertyIdx = 0 );
   }
 
-  async comingSoon(id) {
-    const popover = await this.popoverController.create({
-      component: ComingSoonComponent
-    })
-
-    popover.onDidDismiss()
-      .then((result) => {
-        this.globals.toggleBlur();
-      });
-
-    return await popover.present()
+  async comingSoon( id ) {
+    const popover = await this.popoverController.create( { component: ComingSoonComponent } )
+    popover.onDidDismiss( ).then( ( result ) => { this.globals.toggleBlur( ) } );
+    return await popover.present( )
   }
 
-  removeCard(id) {
+  removeCard( id ) {
     this.propertyLength = this.properties.length;
-    setTimeout(() => {
-      this.properties = this.properties.filter(card => (card || {}).id !== id)
-      if (this.propertyIdx > 0) {
-        this.propertyIdx--;
-      }
-      this.setCurrentProperty();
-    }, 750);
+    setTimeout( ( ) => { 
+      this.properties = this.properties.filter( card => ( card || { } ).id !== id ) 
+      ( this.propertyIdx > 0 ) ? this.propertyIdx-- : null
+      this.setCurrentProperty( ) 
+    }, 750 );
   }
 
-  likeProperty(id) {
-    this.animateCard(`like`);
-
-    this.removeCard(id);
+  likeProperty( id ) {
+    this.animateCard( `like` );
+    this.removeCard( id );
   }
 
-  dislikeProperty(id) {
-    this.animateCard(`dislike`);
-
-    this.removeCard(id);
+  dislikeProperty( id ) {
+    this.animateCard( `dislike` );
+    this.removeCard( id );
   }
 
-  loveProperty(id) {
-    this.animateCard(`love`);
-
-    this.removeCard(id);
+  loveProperty( id ) {
+    this.animateCard( `love` );
+    this.removeCard( id );
   }
 
-  previousProperty() {
-    if ((this.propertyIdx - 1) >= 0) {
-      this.animateCard(`previous`);
-      this.propertyIdx--;
-    }
-    this.setCurrentProperty();
+  previousProperty( ) {
+    ( (this.propertyIdx - 1 ) >= 0 ) ? ( this.animateCard( `previous` ), this.propertyIdx-- ) : null
+    this.setCurrentProperty( );
   }
 
-  nextProperty() {
-    if ((this.propertyIdx + 1) < this.propertyLength) {
-      this.animateCard(`next`);
-    }
-
-    setTimeout(() => {
-      if ((this.propertyIdx + 1) < this.propertyLength) {
-        this.propertyIdx++;
-      }
-      this.setCurrentProperty();
-    }, 750);
+  nextProperty( ) {
+    ( ( this.propertyIdx + 1 ) < this.propertyLength ) ? this.animateCard( `next` ) : null
+    setTimeout( ( ) => { ( ( this.propertyIdx + 1 ) < this.propertyLength ) ? this.propertyIdx++ : null; this.setCurrentProperty( ) }, 750 );
   }
 
-  animateCard(direction) {
+  animateCard( direction) {
     let animation: string;
-    if (direction === `previous`) {
-      animation = `slideLeftReturn`;
-    } else if (direction === `next`) {
-      animation = `slideLeft`;
-    } else if (direction === `details`) {
-      animation = `slideUp`
-    } else if (direction == `like`) {
-      animation = `tinRightOut`
-    } else if (direction == `love`) {
-      animation = `tinUpOut`
-    } else if (direction == `dislike`) {
-      animation = `tinLeftOut`
-    }
 
-    $('.main-card').addClass('magictime');
-    $('.main-card').addClass(animation);
+    ( direction === `previous` ) ?
+      animation = `slideLeftReturn` :
+    ( direction === `next` ) ?
+      animation = `slideLeft` :
+    ( direction === `details` ) ?
+      animation = `slideUp` :
+    ( direction == `like` ) ?
+      animation = `tinRightOut` :
+    ( direction == `love` ) ?
+      animation = `tinUpOut` :
+    ( direction == `dislike` ) ?
+      animation = `tinLeftOut` :
+    null;
 
-    $('.dummy-card').addClass('next-card');
+    $( `.main-card` ).addClass( `magictime` )
+    $( `.main-card` ).addClass( animation )
+    $( `.dummy-card` ).addClass( `next-card` )
 
-    setTimeout(() => {
-      $('.main-card').removeClass(animation);
-    }, 750);
-
-    setTimeout(() => {
-      $('.dummy-card').removeClass('next-card');
-    }, 1500);
+    setTimeout( ( ) => { $( `.main-card` ).removeClass( animation ) }, 750 )
+    setTimeout(( ) => { $( `.dummy-card` ).removeClass( `next-card` ) }, 1500)
   }
 
-  async editFilter() {
-    const modal = await this.modalController.create({
-      component: EditFilterPage
-    });
-    return modal.present();
+  async editFilter( ) {
+    const modal = await this.modalController.create( { component: EditFilterPage } );
+    return modal.present( );
   }
 
-  async signup() {
-    this.globals.toggleBlur();
-
-    const modal = await this.modalController.create({
-      component: SignupPage
-    });
-    return modal.present();
+  async signup( ) {
+    this.globals.toggleBlur( );
+    const modal = await this.modalController.create( { component: SignupPage } );
+    return modal.present( );
   }
 
-  async propertyDetails(detailsOfProperty) {
-    this.animateCard('details');
-
-    const modal = await this.modalController.create({
-      component: PropertyDetailsPage,
-      componentProps: {
-        id: detailsOfProperty.id,
-        showFab: true
-      }
-    });
-
-    modal.onDidDismiss()
-      .then((result) => {
-        if (result.data.componentProps.confirmation == true) {
-          this.loveProperty(result.data.componentProps.id);
-        }
-      });
-
-    setTimeout(() => {
-      return modal.present();
-    }, 750);
-
+  async propertyDetails( detailsOfProperty ) {
+    this.animateCard( `details` );
+    const modal = await this.modalController.create( { component: PropertyDetailsPage, componentProps: { id: detailsOfProperty.id, showFab: true } } );
+    modal.onDidDismiss( ) .then( ( result ) => { ( result.data.componentProps.confirmation == true ) ? this.loveProperty( result.data.componentProps.id ) : null; } );
+    setTimeout( ( ) => { return modal.present( ); }, 750 );
   }
 
 }

@@ -30,23 +30,10 @@ export class PropertyDetailsPage implements OnInit {
   ngOnInit() {
   }
 
-  closeModal(confirmation) {
-    if (confirmation === true) {
-      this.globals.toggleBlur();
-      this.modalController.dismiss({
-        componentProps: {
-          id: this.navParams.data.id,
-          confirmation: true
-        }
-      });
-    } else {
-      this.modalController.dismiss({
-        componentProps: {
-          id: this.navParams.data.id,
-          confirmation: false
-        }
-      });
-    }
+  closeModal( confirmation ) {
+    ( confirmation ) ?
+      (this.globals.toggleBlur(), this.modalController.dismiss( { componentProps: { id: this.navParams.data.id, confirmation: true } } ) ) :
+      ( this.modalController.dismiss( { componentProps: { id: this.navParams.data.id, confirmation: false } } ) )
   }
 
   bookDate() {

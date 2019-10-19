@@ -21,15 +21,9 @@ export class SigninPage implements OnInit {
   }
 
   togglePassword() {
-    if( this.passwordShown ) {
-      this.passwordShown = false
-      this.passwordType = 'password'
-      this.passwordEye = 'eye-off'
-    } else {
-      this.passwordShown = true
-      this.passwordType = 'text'
-      this.passwordEye = 'eye'
-    }
+    ( this.passwordShown ) ?
+      ( this.passwordShown = false, this.passwordType = 'password', this.passwordEye = 'eye-off' ) :
+      ( this.passwordShown = true, this.passwordType = 'text', this.passwordEye = 'eye' ) 
   }
 
   closeModal() {
@@ -38,9 +32,7 @@ export class SigninPage implements OnInit {
 
   async signup() {
     this.closeModal();
-    const modal = await this.modalController.create( {
-      component: SignupPage
-    } );
+    const modal = await this.modalController.create( { component: SignupPage } );
     return modal.present();
   }
 

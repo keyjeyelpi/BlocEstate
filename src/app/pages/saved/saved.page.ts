@@ -71,51 +71,27 @@ export class SavedPage {
 
   constructor( public modalController : ModalController ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   animateCard( id ) {
     let animation: string = `slideUp`
-
     $( '#' + id ).addClass('magictime');
     $( '#' + id ).addClass(animation);
-
-    setTimeout(() => {
-      $( '#' + id ).removeClass(animation);
-    }, 750);
+    setTimeout(() => { $( '#' + id ).removeClass(animation) }, 750)
   }
 
   async showPropertyDetails( propertyDetails ) {
     this.animateCard( propertyDetails.id )
-
-    const modal = await this.modalController.create({
-      component: PropertyDetailsPage,
-      componentProps: {
-        details : propertyDetails
-      }
-    });
-
-    setTimeout(() => {      
-      return modal.present();
-    }, 750);
+    const modal = await this.modalController.create( { component: PropertyDetailsPage, componentProps: { details : propertyDetails } } )
+    setTimeout( () => { return modal.present() }, 750 )
   }
 
   async showMore( type ) {
-    
-    if( type == 'like' ) {
-      this.content = {
-        component: RecentLikesPage,
-        componentProps: this.properties.likes
-      }
-    } else {
-      this.content = {
-        component: FavoritesPage,
-        componentProps: this.properties.favorites
-      }
-    }
+    ( type == 'like' ) ?
+      this.content = { component: RecentLikesPage, componentProps: this.properties.likes } : 
+      this.content = { component: FavoritesPage, componentProps: this.properties.favorites }
 
     const modal = await this.modalController.create( this.content );
     return modal.present();
   }
-
 }
